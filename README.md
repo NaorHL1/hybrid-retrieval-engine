@@ -57,7 +57,7 @@ We followed strict architectural planning to ensure enterprise-grade scalability
 * **Why:** To achieve both massive scale and precision, we use a tiered approach:
   1. Retrieve top 1,000 candidates via Dense and Sparse searches.
   2. Fuse them instantly using **RRF** (Stage 1).
-  3. Pass only the Top 15 candidates through a local **Cross-Encoder** (`ms-marco-MiniLM-L-6-v2`) for precision reranking (Stage 2). 
+  3. Pass only the Top 50 candidates through a local **Cross-Encoder** (`ms-marco-MiniLM-L-6-v2`) for precision reranking (Stage 2). 
 * **Rejected:** *RRF Only* (lacks contextual understanding), *LLM-as-a-Judge* (unacceptable latency).
 
 ---
