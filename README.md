@@ -26,6 +26,17 @@ A production-grade Retrieval-Augmented Generation (RAG) backend utilizing Hybrid
 * **Decision:** We chose **BAAI/BGE-M3** (or its lightweight variant `bge-small-en-v1.5`) via `sentence-transformers`.
 * **Reasoning:** Based on the 2026 benchmark guide on [Best Local Embedding Models for RAG](https://atomic.chat/blog/guides/best-embedding-models-for-rag), BGE models offer the perfect balance of retrieval quality (nDCG@10), fast indexing speed, and low memory usage. Crucially, the BGE architecture is natively designed to support multi-vector and hybrid paradigms, making it the most architecturally sound choice for our local Hybrid LanceDB engine.
 
+### 📄 ADR 003: Multi-Stage Hybrid Reranking Pipeline
+**Status:** `🟢 Accepted` | **Date:** October 2026
+
+* **Context:** We need a scalable and highly accurate reranking mechanism to merge dense (Vector) and sparse (BM25) search results. The solution must support massive-scale querying without compromising the deep contextual accuracy of the final results, while remaining completely local (air-gapped).
+* **Alternatives Considered:** 
+  1. **RRF (Reciprocal Rank Fusion) Only:** Extremely fast, but relies entirely on heuristics rather than contextual understanding, leading to suboptimal precision.
+  2. **Direct Cross-Encoder (e.g., Cohere/BGE):** Highly accurate, but computationally impossible to run on millions of initial retrieved documents (O(N) latency bottleneck).
+  3. **LLM-as-a-Judge (e.g., local Llama-3):** Highly precise but incurs unacceptable latency (multiple seconds per query).
+* **Decision:** We adopted a **Multi-Stage Reranking Pipeline** (RRF + Local Listwise Cross-Encoder).
+* **Reasoning:** To achieve both massive scale and precision, we use a tiered approach. First, we retrieve top 1,000 candidates via Dense and Sparse searches and fuse them instantly using RRF (Stage 1). Then, we pass only the Top 50 candidates through a local state-of-the-art Listwise Cross-Encoder (e.g., `BGE-Reranker-v2-m3`) for precision reranking (Stage 2). This prevents processing bottlenecks while ensuring enterprise-grade accuracy, adhering to 2026 RAG architecture standards.
+
 
 ## ✈️ Dataset: Flydubai Flight 1073 Incident Reports
 To rigorously test our Hybrid RAG engine, we utilize a mock dataset based on the recent September 2026 attempted hijacking of Flydubai Flight 1073 (Dubai to Tel Aviv). This domain perfectly illustrates the necessity of Hybrid Search:
