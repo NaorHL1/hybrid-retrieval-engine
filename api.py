@@ -5,8 +5,7 @@ import pandas
 from fastapi import FastAPI
 from sentence_transformers import SentenceTransformer
 
-from lancedb.rerankers import RRFReranker
-from lancedb.rerankers import CrossEncoderReranker
+from lancedb.rerankers import RRFReranker, CrossEncoderReranker
 
 from data_models import FlightDocument
 
@@ -14,6 +13,7 @@ app = FastAPI()
 
 uri = "vector_database"
 
+cross_wrapper = CrossEncoderReranker(model_name="BAAI/bge-reranker-v2-m3")
 
 async def connect_vector_db(path):
     vector_db = await lancedb.connect_async(uri=path)
@@ -39,17 +39,25 @@ async def hybrid_search_incident(query: str):
     """
     db = await connect_vector_db(uri)
     incident_table = await db.open_table("flight_incident")
+
+    rrf_reranker = RRFReranker()
     query_builder = await incident_table.search(
         query, query_type="hybrid", vector_column_name="vector", fts_columns="text"
     )
 
-    rrf_reranker = RRFReranker()
-    cross_encoder = CrossEncoderReranker(model_name="BAAI/bge-reranker-v2-m3")
+    results = await query_builder.rerank(rrf_reranker).select(["id", "title", "text"]).limit(1000).to_list()
 
-    results = query_builder.rerank(rrf_reranker).limit(1000)
-    top_50_results = await results.rerank(cross_encoder).select(["id", "title", "text"]).limit(50).to_list()
-
-    if not top_50_results:
+    if not results:
         return []
+    
+    top_50_results = results[:50]
 
-    return top_50_results
+    pairs = [[query, f"{doc['title']} - {doc['text']}"] for doc in top_50_results]
+    scores = cross_wrapper.model.predict(pairs)
+
+    for doc, score in zip(top_50_results, scores):
+        doc["cross_encoder_score"] = float(score)
+
+    final_top_5 = sorted(top_50_results, key=lambda x: x["cross_encoder_score"], reverse=True)[:5]
+
+    return final_top_5
