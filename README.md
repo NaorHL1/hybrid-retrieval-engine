@@ -42,3 +42,37 @@ A production-grade Retrieval-Augmented Generation (RAG) backend utilizing Hybrid
 To rigorously test our Hybrid RAG engine, we utilize a mock dataset based on the recent September 2026 attempted hijacking of Flydubai Flight 1073 (Dubai to Tel Aviv). This domain perfectly illustrates the necessity of Hybrid Search:
 * **Dense Search** captures semantic aviation security concepts (e.g., "a co-pilot attempting to crash the plane but being subdued by off-duty crew").
 * **Sparse Search (BM25)** captures exact identifiers crucial for investigators (e.g., "Hamam al-Hammami", "squawk 7500", "Prince Sultan bin Abdulaziz Airport", "Boeing 737 MAX 8").
+
+## 🚀 How to Run the Project
+
+This project includes a backend **FastAPI** server and a frontend **Streamlit** dashboard.
+
+### 1. Ingest the Data
+Before searching, you must embed the documents into the LanceDB vector database.
+The dataset includes over 100 uniquely scraped, real-world intelligence and news reports regarding the FZ1073 incident.
+```bash
+uv run python ingest.py
+```
+*This will create a local `vector_database` folder containing the Apache Arrow tables and BGE embeddings.*
+
+### 2. Start the Backend API
+The FastAPI server handles the multi-stage retrieval pipeline (BM25 -> RRF -> Cross-Encoder).
+```bash
+uv run uvicorn api:app --reload
+```
+*The API will be available at `http://127.0.0.1:8000`.*
+
+### 3. Start the Frontend Dashboard
+Open a **new terminal window**, activate your environment, and launch the UI:
+```bash
+uv run streamlit run app.py
+```
+*This will open the sleek, dark-mode compatible Hybrid Retrieval Engine dashboard in your browser.*
+
+## 🛠️ Technology Stack
+* **Database:** LanceDB (Embedded, Serverless)
+* **Embedding Model:** `BAAI/bge-small-en-v1.5`
+* **Cross-Encoder Model:** `cross-encoder/ms-marco-MiniLM-L-6-v2` (Fast local CPU inference)
+* **Backend:** FastAPI (Python)
+* **Frontend:** Streamlit
+* **Package Management:** `uv`

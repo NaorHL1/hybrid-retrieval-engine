@@ -5,7 +5,7 @@ import time
 st.set_page_config(page_title="Hybrid Retrieval Engine", layout="centered")
 
 st.title("Hybrid Retrieval Engine")
-st.markdown("###✈️ Flight 1073 Incident Investigation Database")
+st.markdown("### ✈️ Flight 1073 Incident Investigation Database")
 st.markdown("""
 This platform demonstrates a production-grade **Retrieval-Augmented Generation (RAG) backend**. 
 It combines Semantic Vector Search with Exact-Keyword BM25 Search, fused via Reciprocal Rank Fusion (RRF), and precision-ranked using a local AI Cross-Encoder.

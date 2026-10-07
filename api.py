@@ -1,6 +1,7 @@
 import lancedb
 import json
 import pandas
+import math
 
 from fastapi import FastAPI
 from sentence_transformers import SentenceTransformer
@@ -13,7 +14,7 @@ app = FastAPI()
 
 uri = "vector_database"
 
-cross_wrapper = CrossEncoderReranker(model_name="BAAI/bge-reranker-v2-m3")
+cross_wrapper = CrossEncoderReranker(model_name="cross-encoder/ms-marco-MiniLM-L-6-v2")
 
 async def connect_vector_db(path):
     vector_db = await lancedb.connect_async(uri=path)
@@ -56,7 +57,8 @@ async def hybrid_search_incident(query: str):
     scores = cross_wrapper.model.predict(pairs)
 
     for doc, score in zip(top_50_results, scores):
-        doc["cross_encoder_score"] = float(score)
+        probability = 1 / (1 + math.exp(-float(score)))
+        doc["cross_encoder_score"] = probability
 
     final_top_5 = sorted(top_50_results, key=lambda x: x["cross_encoder_score"], reverse=True)[:5]
 
