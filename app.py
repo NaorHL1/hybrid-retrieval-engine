@@ -4,8 +4,8 @@ import time
 
 st.set_page_config(page_title="Hybrid Retrieval Engine", layout="centered")
 
-st.title("✈️ Hybrid Retrieval Engine")
-st.markdown("### Flight 1073 Incident Investigation Database")
+st.title("Hybrid Retrieval Engine")
+st.markdown("###✈️ Flight 1073 Incident Investigation Database")
 st.markdown("""
 This platform demonstrates a production-grade **Retrieval-Augmented Generation (RAG) backend**. 
 It combines Semantic Vector Search with Exact-Keyword BM25 Search, fused via Reciprocal Rank Fusion (RRF), and precision-ranked using a local AI Cross-Encoder.
@@ -27,8 +27,8 @@ if submit_button and user_query:
         st.write("Running AI Cross-Encoder for precision scoring...")
         
         try:
-            # 15s timeout prevents UI freezing if the backend model takes time to load weights
-            response = requests.get(f"http://127.0.0.1:8000/hybrid-search?query={user_query}", timeout=15)
+            # 60s timeout prevents UI freezing if the backend model takes time to load weights
+            response = requests.get(f"http://127.0.0.1:8000/hybrid-search?query={user_query}", timeout=60)
             
             if response.status_code == 200:
                 results = response.json()
