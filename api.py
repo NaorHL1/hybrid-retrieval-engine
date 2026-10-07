@@ -6,6 +6,7 @@ from fastapi import FastAPI
 from sentence_transformers import SentenceTransformer
 
 from lancedb.rerankers import RRFReranker
+from lancedb.rerankers import CrossEncoderReranker
 
 from data_models import FlightDocument
 
@@ -32,7 +33,7 @@ async def search_incident(query: str):
 
 
 @app.get("/hybrid-search")
-async def search_incident(query: str):
+async def hybrid_search_incident(query: str):
     """
     Gets a text input and returns results from vector search
     """
@@ -42,7 +43,13 @@ async def search_incident(query: str):
         query, query_type="hybrid", vector_column_name="vector", fts_columns="text"
     )
 
-    reranker = RRFReranker()
+    rrf_reranker = RRFReranker()
+    cross_encoder = CrossEncoderReranker(model_name="BAAI/bge-reranker-v2-m3")
 
-    results = await query_builder.rerank(reranker).limit(3).to_list()
-    return results
+    results = query_builder.rerank(rrf_reranker).limit(1000)
+    top_50_results = await results.rerank(cross_encoder).select(["id", "title", "text"]).limit(50).to_list()
+
+    if not top_50_results:
+        return []
+
+    return top_50_results
