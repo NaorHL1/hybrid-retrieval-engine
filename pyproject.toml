@@ -9,6 +9,7 @@ dependencies = [
     "fastapi>=0.142.2",
     "lancedb>=0.39.0",
     "pandas>=3.0.6",
+    "pytest>=9.1.1",
     "requests>=2.34.2",
     "sentence-transformers>=6.1.0",
     "streamlit>=1.65.0",
