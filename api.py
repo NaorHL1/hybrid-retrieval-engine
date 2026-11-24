@@ -21,45 +21,54 @@ async def connect_vector_db(path):
     return vector_db
 
 
+async def _open_table():
+    db = await connect_vector_db(uri)
+    return await db.open_table("flight_incident")
+
+
 @app.get("/search")
-async def search_incident(query: str):
+async def search_incident(query: str, top_k: int = 5):
     """
-    Gets a text input and returns results from vector search
+    Pure dense (vector) search. top_k is configurable so the eval can measure MRR / Recall@k.
     """
-    db = await connect_vector_db(uri)
-    incident_table = await db.open_table("flight_incident")
+    incident_table = await _open_table()
     query_builder = await incident_table.search(query)
-    results = await query_builder.limit(5).to_list()
-    return results
+    return await query_builder.limit(top_k).to_list()
 
 
-@app.get("/hybrid-search")
-async def hybrid_search_incident(query: str):
+async def rrf_candidates(query: str, n: int = 1000):
     """
-    Gets a text input and returns results from vector search
+    Stage 1: dense + BM25 fused with RRF. Returns candidates ordered by RRF score.
     """
-    db = await connect_vector_db(uri)
-    incident_table = await db.open_table("flight_incident")
-
-    rrf_reranker = RRFReranker()
+    incident_table = await _open_table()
     query_builder = await incident_table.search(
         query, query_type="hybrid", vector_column_name="vector", fts_columns="text"
     )
+    return await (
+        query_builder.rerank(RRFReranker())
+        .select(["id", "title", "text"])
+        .limit(n)
+        .to_list()
+    )
 
-    results = await query_builder.rerank(rrf_reranker).select(["id", "title", "text"]).limit(1000).to_list()
 
+def cross_encode(query: str, docs: list[dict]) -> list[dict]:
+    """
+    Stage 2: score (query, doc) pairs jointly with the cross-encoder, sorted best-first.
+    """
+    pairs = [[query, f"{doc['title']} - {doc['text']}"] for doc in docs]
+    scores = cross_wrapper.model.predict(pairs)
+    for doc, score in zip(docs, scores):
+        doc["cross_encoder_score"] = 1 / (1 + math.exp(-float(score)))
+    return sorted(docs, key=lambda d: d["cross_encoder_score"], reverse=True)
+
+
+@app.get("/hybrid-search")
+async def hybrid_search_incident(query: str, top_k: int = 5, rerank_top_n: int = 50):
+    """
+    Hybrid pipeline: RRF(dense + BM25) -> cross-encoder on the top `rerank_top_n` -> top_k.
+    """
+    results = await rrf_candidates(query)
     if not results:
         return []
-    
-    top_50_results = results[:50]
-
-    pairs = [[query, f"{doc['title']} - {doc['text']}"] for doc in top_50_results]
-    scores = cross_wrapper.model.predict(pairs)
-
-    for doc, score in zip(top_50_results, scores):
-        probability = 1 / (1 + math.exp(-float(score)))
-        doc["cross_encoder_score"] = probability
-
-    final_top_5 = sorted(top_50_results, key=lambda x: x["cross_encoder_score"], reverse=True)[:5]
-
-    return final_top_5
+    return cross_encode(query, results[:rerank_top_n])[:top_k]
