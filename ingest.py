@@ -14,6 +14,10 @@ def ingest_data_to_vector_db(table):
         data = json.loads(file.read())
     table.add(data)
 
+    # Synthetic distractors (doc_1001+): stress-test data, not news. See data/distractors_synthetic.json
+    with open("data/distractors_synthetic.json", "r", encoding="utf-8") as file:
+        table.add(json.loads(file.read()))
+
 def add_data_to_vector_db(table):
    more_data = [
             {
