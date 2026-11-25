@@ -37,6 +37,31 @@ caveats apply. "Single query" means exactly that: not a general rate.
    (identical eval results). Timings on this machine vary a lot between runs (9-14 s for
    the same setting), so quote minimum and range, not a single run.
 
+8. **Look-alike identifier distractors** (36 synthetic docs, `doc_1305`-`doc_1340`: near-miss
+   registrations, phone numbers, squawk codes, flight numbers, times, counts, law/case and
+   person names; verified by code to contain no full target string). Identifier bucket, strict
+   Hit@3 / Hit@1, n=15, single run:
+
+   | config | no distractors | short (130 chars) | length-matched (~409) |
+   |---|---|---|---|
+   | dense | 0.80 / 0.73 | 0.60 / 0.20 | 0.67 / 0.27 |
+   | bm25 | 0.93 / 0.87 | 0.73 / 0.40 | 0.87 / 0.87 |
+   | rrf | 0.87 / 0.87 | 0.73 / 0.33 | 0.87 / 0.40 |
+   | rrf+ce | 1.00 / 1.00 | 0.87 / 0.67 | 0.87 / 0.67 |
+
+   - The first (short) version was a confound: distractors were ~3x shorter than their targets
+     (130 vs 381 chars median), and BM25's length normalization favors short documents.
+     With length-matched distractors BM25 recovers fully (Hit@1 0.87).
+   - Dense stays hurt at equal length (Hit@1 0.73 -> 0.27): it cannot separate one-character
+     differences in IDs.
+   - Fusing with dense lowers top-1 relative to BM25 alone (RRF Hit@1 0.40 vs BM25 0.87). The
+     README's claim that hybrid helps on identifiers is not supported by this set.
+   - The cross-encoder does not depend on length, but its identifier Hit@1 fell from 1.00 to
+     0.67 once look-alikes existed.
+   - Caveats: 15 queries, one distractor set written by the same assistant, identical filler
+     text across all padded docs. `ingest.py` defaults to the length-matched file; set
+     `LOOKALIKE_FILE=data/distractors_lookalike.json` for the short stress variant.
+
 ## Retracted
 - Drafting note for `sem-12` said the target was missing from the candidate pool. Wrong: the
   helper script hid the target from its own candidate list. In the v0 run it is rank 1 in

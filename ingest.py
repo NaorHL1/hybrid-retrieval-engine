@@ -22,7 +22,7 @@ def ingest_data_to_vector_db(table):
     # Synthetic look-alike identifiers (doc_1305+): near-miss IDs/names/numbers that must NOT
     # answer any eval query. Used to test whether dense or BM25 confuses near-identical IDs.
     # LOOKALIKE_FILE lets the eval compare short vs length-matched versions of the same set.
-    lookalike_path = os.environ.get("LOOKALIKE_FILE", "data/distractors_lookalike.json")
+    lookalike_path = os.environ.get("LOOKALIKE_FILE", "data/distractors_lookalike_long.json")
     with open(lookalike_path, "r", encoding="utf-8") as file:
         table.add(json.loads(file.read()))
 
