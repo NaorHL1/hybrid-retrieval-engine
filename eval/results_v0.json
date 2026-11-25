@@ -1,0 +1,5342 @@
+{
+ "config": {
+  "rrf_pool": 1000,
+  "candidates": 50,
+  "n_queries": 45,
+  "bootstrap": {
+   "n": 1000,
+   "seed": 0,
+   "ci": 0.95
+  }
+ },
+ "summary": {
+  "all": {
+   "n": 45,
+   "strict": {
+    "dense": {
+     "hit@1": {
+      "mean": 0.5778,
+      "ci95": [
+       0.4444,
+       0.7111
+      ]
+     },
+     "hit@3": {
+      "mean": 0.7111,
+      "ci95": [
+       0.5778,
+       0.8222
+      ]
+     },
+     "mrr": {
+      "mean": 0.6784,
+      "ci95": [
+       0.5711,
+       0.7889
+      ]
+     }
+    },
+    "bm25": {
+     "hit@1": {
+      "mean": 0.6222,
+      "ci95": [
+       0.4889,
+       0.7556
+      ]
+     },
+     "hit@3": {
+      "mean": 0.7778,
+      "ci95": [
+       0.6444,
+       0.8889
+      ]
+     },
+     "mrr": {
+      "mean": 0.7079,
+      "ci95": [
+       0.5921,
+       0.8191
+      ]
+     }
+    },
+    "rrf": {
+     "hit@1": {
+      "mean": 0.6444,
+      "ci95": [
+       0.5111,
+       0.7778
+      ]
+     },
+     "hit@3": {
+      "mean": 0.7778,
+      "ci95": [
+       0.6444,
+       0.8889
+      ]
+     },
+     "mrr": {
+      "mean": 0.7303,
+      "ci95": [
+       0.626,
+       0.8377
+      ]
+     }
+    },
+    "rrf+ce": {
+     "hit@1": {
+      "mean": 0.8,
+      "ci95": [
+       0.6889,
+       0.9111
+      ]
+     },
+     "hit@3": {
+      "mean": 0.8889,
+      "ci95": [
+       0.7778,
+       0.9778
+      ]
+     },
+     "mrr": {
+      "mean": 0.8501,
+      "ci95": [
+       0.7501,
+       0.9365
+      ]
+     }
+    },
+    "candidate_recall@50": {
+     "mean": 0.9556,
+     "ci95": [
+      0.8889,
+      1.0
+     ]
+    }
+   },
+   "lenient": {
+    "dense": {
+     "hit@1": {
+      "mean": 0.6222,
+      "ci95": [
+       0.4889,
+       0.7556
+      ]
+     },
+     "hit@3": {
+      "mean": 0.7778,
+      "ci95": [
+       0.6444,
+       0.8889
+      ]
+     },
+     "mrr": {
+      "mean": 0.7292,
+      "ci95": [
+       0.6233,
+       0.833
+      ]
+     }
+    },
+    "bm25": {
+     "hit@1": {
+      "mean": 0.6889,
+      "ci95": [
+       0.5556,
+       0.8222
+      ]
+     },
+     "hit@3": {
+      "mean": 0.8222,
+      "ci95": [
+       0.6889,
+       0.9333
+      ]
+     },
+     "mrr": {
+      "mean": 0.7626,
+      "ci95": [
+       0.6471,
+       0.8669
+      ]
+     }
+    },
+    "rrf": {
+     "hit@1": {
+      "mean": 0.6889,
+      "ci95": [
+       0.5556,
+       0.8222
+      ]
+     },
+     "hit@3": {
+      "mean": 0.8222,
+      "ci95": [
+       0.7111,
+       0.9333
+      ]
+     },
+     "mrr": {
+      "mean": 0.7748,
+      "ci95": [
+       0.6709,
+       0.8712
+      ]
+     }
+    },
+    "rrf+ce": {
+     "hit@1": {
+      "mean": 0.8667,
+      "ci95": [
+       0.7556,
+       0.9556
+      ]
+     },
+     "hit@3": {
+      "mean": 0.9111,
+      "ci95": [
+       0.8222,
+       0.9778
+      ]
+     },
+     "mrr": {
+      "mean": 0.8956,
+      "ci95": [
+       0.8013,
+       0.9684
+      ]
+     }
+    },
+    "candidate_recall@50": {
+     "mean": 0.9778,
+     "ci95": [
+      0.9111,
+      1.0
+     ]
+    }
+   }
+  },
+  "identifier": {
+   "n": 15,
+   "strict": {
+    "dense": {
+     "hit@1": {
+      "mean": 0.7333,
+      "ci95": [
+       0.5333,
+       0.9333
+      ]
+     },
+     "hit@3": {
+      "mean": 0.8,
+      "ci95": [
+       0.6,
+       1.0
+      ]
+     },
+     "mrr": {
+      "mean": 0.7748,
+      "ci95": [
+       0.5799,
+       0.95
+      ]
+     }
+    },
+    "bm25": {
+     "hit@1": {
+      "mean": 0.8667,
+      "ci95": [
+       0.6667,
+       1.0
+      ]
+     },
+     "hit@3": {
+      "mean": 0.9333,
+      "ci95": [
+       0.8,
+       1.0
+      ]
+     },
+     "mrr": {
+      "mean": 0.9,
+      "ci95": [
+       0.7333,
+       1.0
+      ]
+     }
+    },
+    "rrf": {
+     "hit@1": {
+      "mean": 0.8667,
+      "ci95": [
+       0.6667,
+       1.0
+      ]
+     },
+     "hit@3": {
+      "mean": 0.8667,
+      "ci95": [
+       0.6667,
+       1.0
+      ]
+     },
+     "mrr": {
+      "mean": 0.89,
+      "ci95": [
+       0.74,
+       1.0
+      ]
+     }
+    },
+    "rrf+ce": {
+     "hit@1": {
+      "mean": 1.0,
+      "ci95": [
+       1.0,
+       1.0
+      ]
+     },
+     "hit@3": {
+      "mean": 1.0,
+      "ci95": [
+       1.0,
+       1.0
+      ]
+     },
+     "mrr": {
+      "mean": 1.0,
+      "ci95": [
+       1.0,
+       1.0
+      ]
+     }
+    },
+    "candidate_recall@50": {
+     "mean": 1.0,
+     "ci95": [
+      1.0,
+      1.0
+     ]
+    }
+   },
+   "lenient": {
+    "dense": {
+     "hit@1": {
+      "mean": 0.7333,
+      "ci95": [
+       0.5333,
+       0.9333
+      ]
+     },
+     "hit@3": {
+      "mean": 0.8,
+      "ci95": [
+       0.6,
+       1.0
+      ]
+     },
+     "mrr": {
+      "mean": 0.7748,
+      "ci95": [
+       0.5799,
+       0.95
+      ]
+     }
+    },
+    "bm25": {
+     "hit@1": {
+      "mean": 0.8667,
+      "ci95": [
+       0.6667,
+       1.0
+      ]
+     },
+     "hit@3": {
+      "mean": 0.9333,
+      "ci95": [
+       0.8,
+       1.0
+      ]
+     },
+     "mrr": {
+      "mean": 0.9,
+      "ci95": [
+       0.7333,
+       1.0
+      ]
+     }
+    },
+    "rrf": {
+     "hit@1": {
+      "mean": 0.8667,
+      "ci95": [
+       0.6667,
+       1.0
+      ]
+     },
+     "hit@3": {
+      "mean": 0.8667,
+      "ci95": [
+       0.6667,
+       1.0
+      ]
+     },
+     "mrr": {
+      "mean": 0.89,
+      "ci95": [
+       0.74,
+       1.0
+      ]
+     }
+    },
+    "rrf+ce": {
+     "hit@1": {
+      "mean": 1.0,
+      "ci95": [
+       1.0,
+       1.0
+      ]
+     },
+     "hit@3": {
+      "mean": 1.0,
+      "ci95": [
+       1.0,
+       1.0
+      ]
+     },
+     "mrr": {
+      "mean": 1.0,
+      "ci95": [
+       1.0,
+       1.0
+      ]
+     }
+    },
+    "candidate_recall@50": {
+     "mean": 1.0,
+     "ci95": [
+      1.0,
+      1.0
+     ]
+    }
+   }
+  },
+  "mixed": {
+   "n": 15,
+   "strict": {
+    "dense": {
+     "hit@1": {
+      "mean": 0.7333,
+      "ci95": [
+       0.5333,
+       0.9333
+      ]
+     },
+     "hit@3": {
+      "mean": 0.8667,
+      "ci95": [
+       0.6667,
+       1.0
+      ]
+     },
+     "mrr": {
+      "mean": 0.8189,
+      "ci95": [
+       0.6533,
+       0.9556
+      ]
+     }
+    },
+    "bm25": {
+     "hit@1": {
+      "mean": 0.7333,
+      "ci95": [
+       0.4667,
+       0.9333
+      ]
+     },
+     "hit@3": {
+      "mean": 0.8667,
+      "ci95": [
+       0.6667,
+       1.0
+      ]
+     },
+     "mrr": {
+      "mean": 0.8135,
+      "ci95": [
+       0.6296,
+       0.9667
+      ]
+     }
+    },
+    "rrf": {
+     "hit@1": {
+      "mean": 0.8,
+      "ci95": [
+       0.6,
+       1.0
+      ]
+     },
+     "hit@3": {
+      "mean": 0.8667,
+      "ci95": [
+       0.6667,
+       1.0
+      ]
+     },
+     "mrr": {
+      "mean": 0.8611,
+      "ci95": [
+       0.6944,
+       1.0
+      ]
+     }
+    },
+    "rrf+ce": {
+     "hit@1": {
+      "mean": 0.8667,
+      "ci95": [
+       0.6667,
+       1.0
+      ]
+     },
+     "hit@3": {
+      "mean": 0.8667,
+      "ci95": [
+       0.6667,
+       1.0
+      ]
+     },
+     "mrr": {
+      "mean": 0.8895,
+      "ci95": [
+       0.7219,
+       1.0
+      ]
+     }
+    },
+    "candidate_recall@50": {
+     "mean": 1.0,
+     "ci95": [
+      1.0,
+      1.0
+     ]
+    }
+   },
+   "lenient": {
+    "dense": {
+     "hit@1": {
+      "mean": 0.7333,
+      "ci95": [
+       0.5333,
+       0.9333
+      ]
+     },
+     "hit@3": {
+      "mean": 0.9333,
+      "ci95": [
+       0.8,
+       1.0
+      ]
+     },
+     "mrr": {
+      "mean": 0.85,
+      "ci95": [
+       0.7167,
+       0.9667
+      ]
+     }
+    },
+    "bm25": {
+     "hit@1": {
+      "mean": 0.8,
+      "ci95": [
+       0.6,
+       1.0
+      ]
+     },
+     "hit@3": {
+      "mean": 0.8667,
+      "ci95": [
+       0.6667,
+       1.0
+      ]
+     },
+     "mrr": {
+      "mean": 0.8527,
+      "ci95": [
+       0.6782,
+       1.0
+      ]
+     }
+    },
+    "rrf": {
+     "hit@1": {
+      "mean": 0.8,
+      "ci95": [
+       0.6,
+       1.0
+      ]
+     },
+     "hit@3": {
+      "mean": 0.8667,
+      "ci95": [
+       0.6667,
+       1.0
+      ]
+     },
+     "mrr": {
+      "mean": 0.8667,
+      "ci95": [
+       0.7167,
+       1.0
+      ]
+     }
+    },
+    "rrf+ce": {
+     "hit@1": {
+      "mean": 0.8667,
+      "ci95": [
+       0.6667,
+       1.0
+      ]
+     },
+     "hit@3": {
+      "mean": 0.8667,
+      "ci95": [
+       0.6667,
+       1.0
+      ]
+     },
+     "mrr": {
+      "mean": 0.8929,
+      "ci95": [
+       0.7286,
+       1.0
+      ]
+     }
+    },
+    "candidate_recall@50": {
+     "mean": 1.0,
+     "ci95": [
+      1.0,
+      1.0
+     ]
+    }
+   }
+  },
+  "semantic": {
+   "n": 15,
+   "strict": {
+    "dense": {
+     "hit@1": {
+      "mean": 0.2667,
+      "ci95": [
+       0.0667,
+       0.5333
+      ]
+     },
+     "hit@3": {
+      "mean": 0.4667,
+      "ci95": [
+       0.2,
+       0.7333
+      ]
+     },
+     "mrr": {
+      "mean": 0.4415,
+      "ci95": [
+       0.2646,
+       0.6339
+      ]
+     }
+    },
+    "bm25": {
+     "hit@1": {
+      "mean": 0.2667,
+      "ci95": [
+       0.0667,
+       0.5333
+      ]
+     },
+     "hit@3": {
+      "mean": 0.5333,
+      "ci95": [
+       0.2667,
+       0.8
+      ]
+     },
+     "mrr": {
+      "mean": 0.4102,
+      "ci95": [
+       0.2073,
+       0.6324
+      ]
+     }
+    },
+    "rrf": {
+     "hit@1": {
+      "mean": 0.2667,
+      "ci95": [
+       0.0667,
+       0.4667
+      ]
+     },
+     "hit@3": {
+      "mean": 0.6,
+      "ci95": [
+       0.3333,
+       0.8667
+      ]
+     },
+     "mrr": {
+      "mean": 0.4398,
+      "ci95": [
+       0.2537,
+       0.6348
+      ]
+     }
+    },
+    "rrf+ce": {
+     "hit@1": {
+      "mean": 0.5333,
+      "ci95": [
+       0.2667,
+       0.8
+      ]
+     },
+     "hit@3": {
+      "mean": 0.8,
+      "ci95": [
+       0.6,
+       1.0
+      ]
+     },
+     "mrr": {
+      "mean": 0.6607,
+      "ci95": [
+       0.4598,
+       0.8444
+      ]
+     }
+    },
+    "candidate_recall@50": {
+     "mean": 0.8667,
+     "ci95": [
+      0.6667,
+      1.0
+     ]
+    }
+   },
+   "lenient": {
+    "dense": {
+     "hit@1": {
+      "mean": 0.4,
+      "ci95": [
+       0.2,
+       0.6667
+      ]
+     },
+     "hit@3": {
+      "mean": 0.6,
+      "ci95": [
+       0.3333,
+       0.8
+      ]
+     },
+     "mrr": {
+      "mean": 0.5629,
+      "ci95": [
+       0.3785,
+       0.7556
+      ]
+     }
+    },
+    "bm25": {
+     "hit@1": {
+      "mean": 0.4,
+      "ci95": [
+       0.1333,
+       0.6667
+      ]
+     },
+     "hit@3": {
+      "mean": 0.6667,
+      "ci95": [
+       0.4,
+       0.9333
+      ]
+     },
+     "mrr": {
+      "mean": 0.5351,
+      "ci95": [
+       0.3181,
+       0.7667
+      ]
+     }
+    },
+    "rrf": {
+     "hit@1": {
+      "mean": 0.4,
+      "ci95": [
+       0.1333,
+       0.6667
+      ]
+     },
+     "hit@3": {
+      "mean": 0.7333,
+      "ci95": [
+       0.4667,
+       0.9333
+      ]
+     },
+     "mrr": {
+      "mean": 0.5676,
+      "ci95": [
+       0.3688,
+       0.7667
+      ]
+     }
+    },
+    "rrf+ce": {
+     "hit@1": {
+      "mean": 0.7333,
+      "ci95": [
+       0.4667,
+       0.9333
+      ]
+     },
+     "hit@3": {
+      "mean": 0.8667,
+      "ci95": [
+       0.6667,
+       1.0
+      ]
+     },
+     "mrr": {
+      "mean": 0.794,
+      "ci95": [
+       0.588,
+       0.9667
+      ]
+     }
+    },
+    "candidate_recall@50": {
+     "mean": 0.9333,
+     "ci95": [
+      0.8,
+      1.0
+     ]
+    }
+   }
+  }
+ },
+ "latency": {
+  "dense": {
+   "p50_ms": 111.9,
+   "max_ms": 5004.4
+  },
+  "bm25": {
+   "p50_ms": 14.5,
+   "max_ms": 64.7
+  },
+  "rrf": {
+   "p50_ms": 125.6,
+   "max_ms": 316.0
+  },
+  "ce": {
+   "p50_ms": 11828.8,
+   "max_ms": 15334.5
+  }
+ },
+ "per_query": [
+  {
+   "id": "sem-01",
+   "bucket": "semantic",
+   "query": "Who arrested the suspect after the plane landed?",
+   "expected_id": "doc_0012",
+   "also_relevant": [],
+   "ranks": {
+    "strict": {
+     "dense": 4,
+     "bm25": 2,
+     "rrf": 2,
+     "rrf+ce": 3,
+     "rrf_full": 2
+    },
+    "lenient": {
+     "dense": 4,
+     "bm25": 2,
+     "rrf": 2,
+     "rrf+ce": 3,
+     "rrf_full": 2
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0123",
+     "doc_0130",
+     "doc_0002"
+    ],
+    "bm25": [
+     "doc_0123",
+     "doc_0012",
+     "doc_0046"
+    ],
+    "rrf": [
+     "doc_0123",
+     "doc_0012",
+     "doc_0002"
+    ],
+    "rrf+ce": [
+     "doc_0123",
+     "doc_0040",
+     "doc_0012"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.25,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.5,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.5,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.3333333333333333,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.25,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.5,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.5,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.3333333333333333,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "sem-02",
+   "bucket": "semantic",
+   "query": "Why was Israel unable to send its own military planes to bring its citizens home?",
+   "expected_id": "doc_0020",
+   "also_relevant": [],
+   "ranks": {
+    "strict": {
+     "dense": 5,
+     "bm25": 2,
+     "rrf": 3,
+     "rrf+ce": 1,
+     "rrf_full": 3
+    },
+    "lenient": {
+     "dense": 5,
+     "bm25": 2,
+     "rrf": 3,
+     "rrf+ce": 1,
+     "rrf_full": 3
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0011",
+     "doc_0056",
+     "doc_0022"
+    ],
+    "bm25": [
+     "doc_0056",
+     "doc_0020",
+     "doc_0034"
+    ],
+    "rrf": [
+     "doc_0056",
+     "doc_0011",
+     "doc_0020"
+    ],
+    "rrf+ce": [
+     "doc_0020",
+     "doc_0011",
+     "doc_0056"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.2,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.5,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.3333333333333333,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.2,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.5,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.3333333333333333,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "sem-03",
+   "bucket": "semantic",
+   "query": "Does the government itself check the backgrounds of pilots employed by overseas airlines?",
+   "expected_id": "doc_0025",
+   "also_relevant": [],
+   "ranks": {
+    "strict": {
+     "dense": 2,
+     "bm25": 3,
+     "rrf": 2,
+     "rrf+ce": 1,
+     "rrf_full": 2
+    },
+    "lenient": {
+     "dense": 2,
+     "bm25": 3,
+     "rrf": 2,
+     "rrf+ce": 1,
+     "rrf_full": 2
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0043",
+     "doc_0025",
+     "doc_1038"
+    ],
+    "bm25": [
+     "doc_0116",
+     "doc_0043",
+     "doc_0025"
+    ],
+    "rrf": [
+     "doc_0043",
+     "doc_0025",
+     "doc_1038"
+    ],
+    "rrf+ce": [
+     "doc_0025",
+     "doc_0043",
+     "doc_0093"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.5,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.3333333333333333,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.5,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.5,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.3333333333333333,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.5,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "sem-04",
+   "bucket": "semantic",
+   "query": "How close did the jet come to hitting the ground before it recovered?",
+   "expected_id": "doc_0028",
+   "also_relevant": [],
+   "ranks": {
+    "strict": {
+     "dense": 28,
+     "bm25": null,
+     "rrf": 21,
+     "rrf+ce": 1,
+     "rrf_full": 21
+    },
+    "lenient": {
+     "dense": 28,
+     "bm25": null,
+     "rrf": 21,
+     "rrf+ce": 1,
+     "rrf_full": 21
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0143",
+     "doc_0087",
+     "doc_0011"
+    ],
+    "bm25": [
+     "doc_1031",
+     "doc_0029",
+     "doc_0094"
+    ],
+    "rrf": [
+     "doc_0011",
+     "doc_0008",
+     "doc_1031"
+    ],
+    "rrf+ce": [
+     "doc_0028",
+     "doc_0089",
+     "doc_0143"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.03571428571428571,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.0,
+      "recall@50": 0.0
+     },
+     "rrf": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.047619047619047616,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.03571428571428571,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.0,
+      "recall@50": 0.0
+     },
+     "rrf": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.047619047619047616,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "sem-05",
+   "bucket": "semantic",
+   "query": "What facility did the accused pilot intend to strike?",
+   "expected_id": "doc_0031",
+   "also_relevant": [
+    "doc_0044",
+    "doc_0148"
+   ],
+   "ranks": {
+    "strict": {
+     "dense": 15,
+     "bm25": null,
+     "rrf": null,
+     "rrf+ce": null,
+     "rrf_full": 60
+    },
+    "lenient": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0044",
+     "doc_0148",
+     "doc_0130"
+    ],
+    "bm25": [
+     "doc_0044",
+     "doc_1056",
+     "doc_0051"
+    ],
+    "rrf": [
+     "doc_0044",
+     "doc_0148",
+     "doc_0051"
+    ],
+    "rrf+ce": [
+     "doc_0044",
+     "doc_0032",
+     "doc_0049"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.06666666666666667,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.0,
+      "recall@50": 0.0
+     },
+     "rrf": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.0,
+      "recall@50": 0.0
+     },
+     "rrf+ce": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.0,
+      "recall@50": 0.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "sem-06",
+   "bucket": "semantic",
+   "query": "Why should a crew member from a country without relations with Israel have been stopped at the border?",
+   "expected_id": "doc_0056",
+   "also_relevant": [
+    "doc_0038"
+   ],
+   "ranks": {
+    "strict": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    },
+    "lenient": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0056",
+     "doc_0116",
+     "doc_0022"
+    ],
+    "bm25": [
+     "doc_0056",
+     "doc_0090",
+     "doc_0038"
+    ],
+    "rrf": [
+     "doc_0056",
+     "doc_0090",
+     "doc_0036"
+    ],
+    "rrf+ce": [
+     "doc_0056",
+     "doc_0038",
+     "doc_0036"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "sem-07",
+   "bucket": "semantic",
+   "query": "What did his previous employer do when worried about his extremist leanings?",
+   "expected_id": "doc_0054",
+   "also_relevant": [
+    "doc_0014",
+    "doc_0041"
+   ],
+   "ranks": {
+    "strict": {
+     "dense": 4,
+     "bm25": 4,
+     "rrf": 3,
+     "rrf+ce": 2,
+     "rrf_full": 3
+    },
+    "lenient": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0014",
+     "doc_0041",
+     "doc_0055"
+    ],
+    "bm25": [
+     "doc_0041",
+     "doc_1265",
+     "doc_1157"
+    ],
+    "rrf": [
+     "doc_0041",
+     "doc_0014",
+     "doc_0054"
+    ],
+    "rrf+ce": [
+     "doc_0041",
+     "doc_0054",
+     "doc_0014"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.25,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.25,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.3333333333333333,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.5,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "sem-08",
+   "bucket": "semantic",
+   "query": "How did the airlines respond commercially after the attack?",
+   "expected_id": "doc_0132",
+   "also_relevant": [
+    "doc_0153",
+    "doc_0151"
+   ],
+   "ranks": {
+    "strict": {
+     "dense": 24,
+     "bm25": null,
+     "rrf": null,
+     "rrf+ce": null,
+     "rrf_full": 78
+    },
+    "lenient": {
+     "dense": 8,
+     "bm25": null,
+     "rrf": null,
+     "rrf+ce": null,
+     "rrf_full": 60
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0003",
+     "doc_0112",
+     "doc_0138"
+    ],
+    "bm25": [
+     "doc_0034",
+     "doc_1055",
+     "doc_0027"
+    ],
+    "rrf": [
+     "doc_0027",
+     "doc_0116",
+     "doc_0034"
+    ],
+    "rrf+ce": [
+     "doc_0027",
+     "doc_0096",
+     "doc_0022"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.041666666666666664,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.0,
+      "recall@50": 0.0
+     },
+     "rrf": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.0,
+      "recall@50": 0.0
+     },
+     "rrf+ce": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.0,
+      "recall@50": 0.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.125,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.0,
+      "recall@50": 0.0
+     },
+     "rrf": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.0,
+      "recall@50": 0.0
+     },
+     "rrf+ce": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.0,
+      "recall@50": 0.0
+     }
+    }
+   }
+  },
+  {
+   "id": "sem-09",
+   "bucket": "semantic",
+   "query": "How did the travelers eventually finish their trip after the emergency landing?",
+   "expected_id": "doc_0126",
+   "also_relevant": [
+    "doc_0139"
+   ],
+   "ranks": {
+    "strict": {
+     "dense": 9,
+     "bm25": 38,
+     "rrf": 9,
+     "rrf+ce": 13,
+     "rrf_full": 9
+    },
+    "lenient": {
+     "dense": 6,
+     "bm25": 38,
+     "rrf": 9,
+     "rrf+ce": 13,
+     "rrf_full": 9
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0138",
+     "doc_0079",
+     "doc_0120"
+    ],
+    "bm25": [
+     "doc_0079",
+     "doc_0046",
+     "doc_0069"
+    ],
+    "rrf": [
+     "doc_0079",
+     "doc_0138",
+     "doc_0069"
+    ],
+    "rrf+ce": [
+     "doc_0079",
+     "doc_0012",
+     "doc_0002"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.1111111111111111,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.02631578947368421,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.1111111111111111,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.07692307692307693,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.16666666666666666,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.02631578947368421,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.1111111111111111,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.07692307692307693,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "sem-10",
+   "bucket": "semantic",
+   "query": "How quickly did the aircraft lose height during the struggle in the cockpit?",
+   "expected_id": "doc_0143",
+   "also_relevant": [
+    "doc_0087"
+   ],
+   "ranks": {
+    "strict": {
+     "dense": 1,
+     "bm25": null,
+     "rrf": 46,
+     "rrf+ce": 2,
+     "rrf_full": 46
+    },
+    "lenient": {
+     "dense": 1,
+     "bm25": null,
+     "rrf": 46,
+     "rrf+ce": 2,
+     "rrf_full": 46
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0143",
+     "doc_0088",
+     "doc_0087"
+    ],
+    "bm25": [
+     "doc_1018",
+     "doc_0080",
+     "doc_1057"
+    ],
+    "rrf": [
+     "doc_0009",
+     "doc_0027",
+     "doc_1018"
+    ],
+    "rrf+ce": [
+     "doc_0009",
+     "doc_0143",
+     "doc_0089"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.0,
+      "recall@50": 0.0
+     },
+     "rrf": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.021739130434782608,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.5,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.0,
+      "recall@50": 0.0
+     },
+     "rrf": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.021739130434782608,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.5,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "sem-11",
+   "bucket": "semantic",
+   "query": "Did prosecutors say he had accomplices?",
+   "expected_id": "doc_0150",
+   "also_relevant": [],
+   "ranks": {
+    "strict": {
+     "dense": 1,
+     "bm25": 2,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    },
+    "lenient": {
+     "dense": 1,
+     "bm25": 2,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0150",
+     "doc_0136",
+     "doc_0018"
+    ],
+    "bm25": [
+     "doc_0146",
+     "doc_0150",
+     "doc_0145"
+    ],
+    "rrf": [
+     "doc_0150",
+     "doc_0146",
+     "doc_0049"
+    ],
+    "rrf+ce": [
+     "doc_0150",
+     "doc_0146",
+     "doc_0149"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.5,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.5,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "sem-12",
+   "bucket": "semantic",
+   "query": "What do forensic findings say about the injuries of the wounded commander?",
+   "expected_id": "doc_0149",
+   "also_relevant": [],
+   "ranks": {
+    "strict": {
+     "dense": 6,
+     "bm25": 1,
+     "rrf": 2,
+     "rrf+ce": 1,
+     "rrf_full": 2
+    },
+    "lenient": {
+     "dense": 6,
+     "bm25": 1,
+     "rrf": 2,
+     "rrf+ce": 1,
+     "rrf_full": 2
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0137",
+     "doc_1109",
+     "doc_0150"
+    ],
+    "bm25": [
+     "doc_0149",
+     "doc_0142",
+     "doc_1058"
+    ],
+    "rrf": [
+     "doc_0142",
+     "doc_0149",
+     "doc_0027"
+    ],
+    "rrf+ce": [
+     "doc_0149",
+     "doc_0027",
+     "doc_0142"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.16666666666666666,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.5,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.16666666666666666,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.5,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "sem-13",
+   "bucket": "semantic",
+   "query": "How many passengers flew Dubai to Tel Aviv on the route since 2 October?",
+   "expected_id": "doc_0152",
+   "also_relevant": [],
+   "ranks": {
+    "strict": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    },
+    "lenient": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0152",
+     "doc_0147",
+     "doc_0022"
+    ],
+    "bm25": [
+     "doc_0152",
+     "doc_0097",
+     "doc_0151"
+    ],
+    "rrf": [
+     "doc_0152",
+     "doc_0151",
+     "doc_0153"
+    ],
+    "rrf+ce": [
+     "doc_0152",
+     "doc_0097",
+     "doc_0153"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "sem-14",
+   "bucket": "semantic",
+   "query": "Which foreign head of government spoke to the injured commander from his hospital room?",
+   "expected_id": "doc_0125",
+   "also_relevant": [
+    "doc_0155"
+   ],
+   "ranks": {
+    "strict": {
+     "dense": 2,
+     "bm25": 23,
+     "rrf": 4,
+     "rrf+ce": 2,
+     "rrf_full": 4
+    },
+    "lenient": {
+     "dense": 2,
+     "bm25": 6,
+     "rrf": 2,
+     "rrf+ce": 1,
+     "rrf_full": 2
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0023",
+     "doc_0125",
+     "doc_0155"
+    ],
+    "bm25": [
+     "doc_0012",
+     "doc_0059",
+     "doc_0094"
+    ],
+    "rrf": [
+     "doc_0012",
+     "doc_0155",
+     "doc_0094"
+    ],
+    "rrf+ce": [
+     "doc_0155",
+     "doc_0125",
+     "doc_0124"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.5,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.043478260869565216,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.25,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.5,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.5,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.16666666666666666,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.5,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "sem-15",
+   "bucket": "semantic",
+   "query": "Had he rehearsed the route on earlier trips before the attack?",
+   "expected_id": "doc_0147",
+   "also_relevant": [],
+   "ranks": {
+    "strict": {
+     "dense": 2,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    },
+    "lenient": {
+     "dense": 2,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0051",
+     "doc_0147",
+     "doc_0120"
+    ],
+    "bm25": [
+     "doc_0147",
+     "doc_1142",
+     "doc_1301"
+    ],
+    "rrf": [
+     "doc_0147",
+     "doc_0094",
+     "doc_0128"
+    ],
+    "rrf+ce": [
+     "doc_0147",
+     "doc_0094",
+     "doc_0027"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.5,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.5,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "idn-01",
+   "bucket": "identifier",
+   "query": "A6-FKF",
+   "expected_id": "doc_0003",
+   "also_relevant": [],
+   "ranks": {
+    "strict": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    },
+    "lenient": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0003",
+     "doc_0118",
+     "doc_0131"
+    ],
+    "bm25": [
+     "doc_0003"
+    ],
+    "rrf": [
+     "doc_0003",
+     "doc_0118",
+     "doc_0131"
+    ],
+    "rrf+ce": [
+     "doc_0003",
+     "doc_0011",
+     "doc_0129"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "idn-02",
+   "bucket": "identifier",
+   "query": "+971 54 232 3578",
+   "expected_id": "doc_0077",
+   "also_relevant": [],
+   "ranks": {
+    "strict": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    },
+    "lenient": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0077",
+     "doc_0003",
+     "doc_0072"
+    ],
+    "bm25": [
+     "doc_0077"
+    ],
+    "rrf": [
+     "doc_0077",
+     "doc_0003",
+     "doc_0072"
+    ],
+    "rrf+ce": [
+     "doc_0077",
+     "doc_0118",
+     "doc_1075"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "idn-03",
+   "bucket": "identifier",
+   "query": "transponder code 7700",
+   "expected_id": "doc_0118",
+   "also_relevant": [
+    "doc_0008"
+   ],
+   "ranks": {
+    "strict": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    },
+    "lenient": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0118",
+     "doc_0077",
+     "doc_0008"
+    ],
+    "bm25": [
+     "doc_0118",
+     "doc_1100",
+     "doc_1152"
+    ],
+    "rrf": [
+     "doc_0118",
+     "doc_0008",
+     "doc_1152"
+    ],
+    "rrf+ce": [
+     "doc_0118",
+     "doc_0008",
+     "doc_0064"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "idn-04",
+   "bucket": "identifier",
+   "query": "FZ1081",
+   "expected_id": "doc_0134",
+   "also_relevant": [],
+   "ranks": {
+    "strict": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    },
+    "lenient": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0134",
+     "doc_0117",
+     "doc_0141"
+    ],
+    "bm25": [
+     "doc_0134"
+    ],
+    "rrf": [
+     "doc_0134",
+     "doc_0117",
+     "doc_0141"
+    ],
+    "rrf+ce": [
+     "doc_0134",
+     "doc_0144",
+     "doc_0117"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "idn-05",
+   "bucket": "identifier",
+   "query": "Air Transport Law 1980",
+   "expected_id": "doc_0104",
+   "also_relevant": [
+    "doc_0096"
+   ],
+   "ranks": {
+    "strict": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    },
+    "lenient": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0104",
+     "doc_0116",
+     "doc_0103"
+    ],
+    "bm25": [
+     "doc_0104",
+     "doc_1291",
+     "doc_1175"
+    ],
+    "rrf": [
+     "doc_0104",
+     "doc_1054",
+     "doc_0116"
+    ],
+    "rrf+ce": [
+     "doc_0104",
+     "doc_0096",
+     "doc_0100"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "idn-06",
+   "bucket": "identifier",
+   "query": "Iberia Airlines v. Fleischer Peled",
+   "expected_id": "doc_0107",
+   "also_relevant": [
+    "doc_0096",
+    "doc_0106"
+   ],
+   "ranks": {
+    "strict": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    },
+    "lenient": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0107",
+     "doc_0096",
+     "doc_0112"
+    ],
+    "bm25": [
+     "doc_0107",
+     "doc_0106",
+     "doc_1297"
+    ],
+    "rrf": [
+     "doc_0107",
+     "doc_0096",
+     "doc_0106"
+    ],
+    "rrf+ce": [
+     "doc_0107",
+     "doc_0106",
+     "doc_0096"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "idn-07",
+   "bucket": "identifier",
+   "query": "Victims of Hostile Actions (Pensions) Law, 1970",
+   "expected_id": "doc_0115",
+   "also_relevant": [
+    "doc_0096"
+   ],
+   "ranks": {
+    "strict": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    },
+    "lenient": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0115",
+     "doc_0103",
+     "doc_0116"
+    ],
+    "bm25": [
+     "doc_0115",
+     "doc_0116",
+     "doc_1133"
+    ],
+    "rrf": [
+     "doc_0115",
+     "doc_0116",
+     "doc_0096"
+    ],
+    "rrf+ce": [
+     "doc_0115",
+     "doc_0116",
+     "doc_0096"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "idn-08",
+   "bucket": "identifier",
+   "query": "17:40 local time",
+   "expected_id": "doc_0139",
+   "also_relevant": [],
+   "ranks": {
+    "strict": {
+     "dense": 26,
+     "bm25": 1,
+     "rrf": 4,
+     "rrf+ce": 1,
+     "rrf_full": 4
+    },
+    "lenient": {
+     "dense": 26,
+     "bm25": 1,
+     "rrf": 4,
+     "rrf+ce": 1,
+     "rrf_full": 4
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_1260",
+     "doc_0118",
+     "doc_0122"
+    ],
+    "bm25": [
+     "doc_0139",
+     "doc_1260",
+     "doc_0138"
+    ],
+    "rrf": [
+     "doc_1260",
+     "doc_0119",
+     "doc_0138"
+    ],
+    "rrf+ce": [
+     "doc_0139",
+     "doc_0138",
+     "doc_0119"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.038461538461538464,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.25,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.038461538461538464,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.25,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "idn-09",
+   "bucket": "identifier",
+   "query": "Ghaith Al Ghaith",
+   "expected_id": "doc_0153",
+   "also_relevant": [],
+   "ranks": {
+    "strict": {
+     "dense": 3,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    },
+    "lenient": {
+     "dense": 3,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0148",
+     "doc_0021",
+     "doc_0153"
+    ],
+    "bm25": [
+     "doc_0153",
+     "doc_0016",
+     "doc_0127"
+    ],
+    "rrf": [
+     "doc_0153",
+     "doc_0002",
+     "doc_0148"
+    ],
+    "rrf+ce": [
+     "doc_0153",
+     "doc_0013",
+     "doc_0012"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.3333333333333333,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.3333333333333333,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "idn-10",
+   "bucket": "identifier",
+   "query": "Eyal Zamir",
+   "expected_id": "doc_0021",
+   "also_relevant": [],
+   "ranks": {
+    "strict": {
+     "dense": 1,
+     "bm25": null,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    },
+    "lenient": {
+     "dense": 1,
+     "bm25": null,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0021",
+     "doc_0155",
+     "doc_0125"
+    ],
+    "bm25": [],
+    "rrf": [
+     "doc_0021",
+     "doc_0155",
+     "doc_0125"
+    ],
+    "rrf+ce": [
+     "doc_0021",
+     "doc_0022",
+     "doc_0002"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.0,
+      "recall@50": 0.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.0,
+      "recall@50": 0.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "idn-11",
+   "bucket": "identifier",
+   "query": "Richard J. Levy",
+   "expected_id": "doc_0027",
+   "also_relevant": [],
+   "ranks": {
+    "strict": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    },
+    "lenient": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0027",
+     "doc_1144",
+     "doc_0111"
+    ],
+    "bm25": [
+     "doc_0027"
+    ],
+    "rrf": [
+     "doc_0027",
+     "doc_1144",
+     "doc_0111"
+    ],
+    "rrf+ce": [
+     "doc_0027",
+     "doc_0096",
+     "doc_0114"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "idn-12",
+   "bucket": "identifier",
+   "query": "Royal Air Maroc",
+   "expected_id": "doc_0145",
+   "also_relevant": [],
+   "ranks": {
+    "strict": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    },
+    "lenient": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0145",
+     "doc_0119",
+     "doc_0077"
+    ],
+    "bm25": [
+     "doc_0145",
+     "doc_0014",
+     "doc_1269"
+    ],
+    "rrf": [
+     "doc_0145",
+     "doc_1044",
+     "doc_0119"
+    ],
+    "rrf+ce": [
+     "doc_0145",
+     "doc_0096",
+     "doc_0112"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "idn-13",
+   "bucket": "identifier",
+   "query": "Humam Khalil Abu-Mulal al-Balawi",
+   "expected_id": "doc_0016",
+   "also_relevant": [
+    "doc_0002"
+   ],
+   "ranks": {
+    "strict": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    },
+    "lenient": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0016",
+     "doc_0034",
+     "doc_0021"
+    ],
+    "bm25": [
+     "doc_0016",
+     "doc_0002",
+     "doc_0139"
+    ],
+    "rrf": [
+     "doc_0016",
+     "doc_0002",
+     "doc_0015"
+    ],
+    "rrf+ce": [
+     "doc_0016",
+     "doc_0002",
+     "doc_0013"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "idn-14",
+   "bucket": "identifier",
+   "query": "7,479 passengers",
+   "expected_id": "doc_0152",
+   "also_relevant": [],
+   "ranks": {
+    "strict": {
+     "dense": 4,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    },
+    "lenient": {
+     "dense": 4,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0144",
+     "doc_0060",
+     "doc_0131"
+    ],
+    "bm25": [
+     "doc_0152",
+     "doc_0126",
+     "doc_0142"
+    ],
+    "rrf": [
+     "doc_0152",
+     "doc_0126",
+     "doc_0144"
+    ],
+    "rrf+ce": [
+     "doc_0152",
+     "doc_0144",
+     "doc_0131"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.25,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.25,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "idn-15",
+   "bucket": "identifier",
+   "query": "10:45 a.m. GST (9:45 a.m. SAST)",
+   "expected_id": "doc_0011",
+   "also_relevant": [],
+   "ranks": {
+    "strict": {
+     "dense": null,
+     "bm25": 2,
+     "rrf": 10,
+     "rrf+ce": 1,
+     "rrf_full": 10
+    },
+    "lenient": {
+     "dense": null,
+     "bm25": 2,
+     "rrf": 10,
+     "rrf+ce": 1,
+     "rrf_full": 10
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0118",
+     "doc_1260",
+     "doc_1294"
+    ],
+    "bm25": [
+     "doc_1014",
+     "doc_0011",
+     "doc_0148"
+    ],
+    "rrf": [
+     "doc_0119",
+     "doc_0138",
+     "doc_0008"
+    ],
+    "rrf+ce": [
+     "doc_0011",
+     "doc_0008",
+     "doc_0119"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.0,
+      "recall@50": 0.0
+     },
+     "bm25": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.5,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.1,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.0,
+      "recall@50": 0.0
+     },
+     "bm25": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.5,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.1,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "mix-01",
+   "bucket": "mixed",
+   "query": "Under the Montreal Convention, what is the maximum an airline owes each passenger?",
+   "expected_id": "doc_0100",
+   "also_relevant": [
+    "doc_0099",
+    "doc_0096"
+   ],
+   "ranks": {
+    "strict": {
+     "dense": 5,
+     "bm25": 9,
+     "rrf": 6,
+     "rrf+ce": 5,
+     "rrf_full": 6
+    },
+    "lenient": {
+     "dense": 2,
+     "bm25": 5,
+     "rrf": 4,
+     "rrf+ce": 4,
+     "rrf_full": 4
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0102",
+     "doc_0096",
+     "doc_0108"
+    ],
+    "bm25": [
+     "doc_0102",
+     "doc_0104",
+     "doc_0108"
+    ],
+    "rrf": [
+     "doc_0102",
+     "doc_0108",
+     "doc_0104"
+    ],
+    "rrf+ce": [
+     "doc_0102",
+     "doc_0104",
+     "doc_0106"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.2,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.1111111111111111,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.16666666666666666,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.2,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.5,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.2,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.25,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.25,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "mix-02",
+   "bucket": "mixed",
+   "query": "Can passengers sue flydubai in Israeli courts under the Montreal Convention?",
+   "expected_id": "doc_0108",
+   "also_relevant": [
+    "doc_0096"
+   ],
+   "ranks": {
+    "strict": {
+     "dense": 1,
+     "bm25": 2,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    },
+    "lenient": {
+     "dense": 1,
+     "bm25": 2,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0108",
+     "doc_0109",
+     "doc_0104"
+    ],
+    "bm25": [
+     "doc_0109",
+     "doc_0108",
+     "doc_0106"
+    ],
+    "rrf": [
+     "doc_0108",
+     "doc_0109",
+     "doc_0096"
+    ],
+    "rrf+ce": [
+     "doc_0108",
+     "doc_0104",
+     "doc_0109"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.5,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.5,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "mix-03",
+   "bucket": "mixed",
+   "query": "Does the Montreal Convention allow compensation for emotional distress alone?",
+   "expected_id": "doc_0106",
+   "also_relevant": [
+    "doc_0107",
+    "doc_0096"
+   ],
+   "ranks": {
+    "strict": {
+     "dense": 3,
+     "bm25": 1,
+     "rrf": 2,
+     "rrf+ce": 1,
+     "rrf_full": 2
+    },
+    "lenient": {
+     "dense": 2,
+     "bm25": 1,
+     "rrf": 2,
+     "rrf+ce": 1,
+     "rrf_full": 2
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0102",
+     "doc_0096",
+     "doc_0106"
+    ],
+    "bm25": [
+     "doc_0106",
+     "doc_0114",
+     "doc_0102"
+    ],
+    "rrf": [
+     "doc_0102",
+     "doc_0106",
+     "doc_0096"
+    ],
+    "rrf+ce": [
+     "doc_0106",
+     "doc_0114",
+     "doc_0096"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.3333333333333333,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.5,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.5,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.5,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "mix-04",
+   "bucket": "mixed",
+   "query": "Which pilots does the Jerusalem Post say reached the cockpit?",
+   "expected_id": "doc_0142",
+   "also_relevant": [],
+   "ranks": {
+    "strict": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    },
+    "lenient": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0142",
+     "doc_0141",
+     "doc_0123"
+    ],
+    "bm25": [
+     "doc_0142",
+     "doc_0141",
+     "doc_0143"
+    ],
+    "rrf": [
+     "doc_0142",
+     "doc_0141",
+     "doc_0123"
+    ],
+    "rrf+ce": [
+     "doc_0142",
+     "doc_0141",
+     "doc_0123"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "mix-05",
+   "bucket": "mixed",
+   "query": "What did Oman Air do with al-Hammami before he left?",
+   "expected_id": "doc_0014",
+   "also_relevant": [
+    "doc_0054",
+    "doc_0041"
+   ],
+   "ranks": {
+    "strict": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    },
+    "lenient": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0014",
+     "doc_0041",
+     "doc_0013"
+    ],
+    "bm25": [
+     "doc_0014",
+     "doc_0018",
+     "doc_0041"
+    ],
+    "rrf": [
+     "doc_0014",
+     "doc_0041",
+     "doc_0018"
+    ],
+    "rrf+ce": [
+     "doc_0014",
+     "doc_0013",
+     "doc_0041"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "mix-06",
+   "bucket": "mixed",
+   "query": "At what local time did the Tabuk airports cluster receive the distress call?",
+   "expected_id": "doc_0138",
+   "also_relevant": [
+    "doc_0119"
+   ],
+   "ranks": {
+    "strict": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    },
+    "lenient": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0138",
+     "doc_0119",
+     "doc_0126"
+    ],
+    "bm25": [
+     "doc_0138",
+     "doc_0119",
+     "doc_1281"
+    ],
+    "rrf": [
+     "doc_0138",
+     "doc_0119",
+     "doc_0126"
+    ],
+    "rrf+ce": [
+     "doc_0138",
+     "doc_0119",
+     "doc_0139"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "mix-07",
+   "bucket": "mixed",
+   "query": "What did Attorney-General al-Shamsi announce on 3 October?",
+   "expected_id": "doc_0130",
+   "also_relevant": [],
+   "ranks": {
+    "strict": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    },
+    "lenient": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0130",
+     "doc_0052",
+     "doc_0129"
+    ],
+    "bm25": [
+     "doc_0130",
+     "doc_0148",
+     "doc_0052"
+    ],
+    "rrf": [
+     "doc_0130",
+     "doc_0052",
+     "doc_0148"
+    ],
+    "rrf+ce": [
+     "doc_0130",
+     "doc_0129",
+     "doc_0148"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "mix-08",
+   "bucket": "mixed",
+   "query": "When did the transponder code change to 7500 and what does it signal?",
+   "expected_id": "doc_0118",
+   "also_relevant": [],
+   "ranks": {
+    "strict": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    },
+    "lenient": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0118",
+     "doc_1089",
+     "doc_1152"
+    ],
+    "bm25": [
+     "doc_0118",
+     "doc_1121",
+     "doc_1294"
+    ],
+    "rrf": [
+     "doc_0118",
+     "doc_1152",
+     "doc_0008"
+    ],
+    "rrf+ce": [
+     "doc_0118",
+     "doc_1294",
+     "doc_0134"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "mix-09",
+   "bucket": "mixed",
+   "query": "How high did FZ1073 climb after departing Dubai according to Flightradar24?",
+   "expected_id": "doc_0117",
+   "also_relevant": [],
+   "ranks": {
+    "strict": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    },
+    "lenient": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0117",
+     "doc_0079",
+     "doc_0008"
+    ],
+    "bm25": [
+     "doc_0117",
+     "doc_0079",
+     "doc_0087"
+    ],
+    "rrf": [
+     "doc_0117",
+     "doc_0079",
+     "doc_0087"
+    ],
+    "rrf+ce": [
+     "doc_0117",
+     "doc_0008",
+     "doc_0079"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "mix-10",
+   "bucket": "mixed",
+   "query": "Which lawyer named Regev represented a couple against a Spanish airline?",
+   "expected_id": "doc_0106",
+   "also_relevant": [
+    "doc_0096"
+   ],
+   "ranks": {
+    "strict": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    },
+    "lenient": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0106",
+     "doc_0104",
+     "doc_0103"
+    ],
+    "bm25": [
+     "doc_0106",
+     "doc_0048",
+     "doc_0104"
+    ],
+    "rrf": [
+     "doc_0106",
+     "doc_0104",
+     "doc_0108"
+    ],
+    "rrf+ce": [
+     "doc_0106",
+     "doc_0103",
+     "doc_0104"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "mix-11",
+   "bucket": "mixed",
+   "query": "What did transport minister Regev say about passenger lists?",
+   "expected_id": "doc_0058",
+   "also_relevant": [],
+   "ranks": {
+    "strict": {
+     "dense": 2,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    },
+    "lenient": {
+     "dense": 2,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0036",
+     "doc_0058",
+     "doc_0022"
+    ],
+    "bm25": [
+     "doc_0058",
+     "doc_0104",
+     "doc_0047"
+    ],
+    "rrf": [
+     "doc_0058",
+     "doc_0036",
+     "doc_0104"
+    ],
+    "rrf+ce": [
+     "doc_0058",
+     "doc_0106",
+     "doc_0103"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.5,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.5,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "mix-12",
+   "bucket": "mixed",
+   "query": "Which airline stopped its codeshare with flydubai to Tel Aviv?",
+   "expected_id": "doc_0151",
+   "also_relevant": [
+    "doc_0132"
+   ],
+   "ranks": {
+    "strict": {
+     "dense": 1,
+     "bm25": 2,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    },
+    "lenient": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0151",
+     "doc_0132",
+     "doc_0134"
+    ],
+    "bm25": [
+     "doc_0132",
+     "doc_0151",
+     "doc_0006"
+    ],
+    "rrf": [
+     "doc_0151",
+     "doc_0132",
+     "doc_0134"
+    ],
+    "rrf+ce": [
+     "doc_0151",
+     "doc_0132",
+     "doc_0152"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 0.0,
+      "hit@3": 1.0,
+      "mrr": 0.5,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "mix-13",
+   "bucket": "mixed",
+   "query": "What did Captain Machchhar tell Netanyahu about the co-pilot?",
+   "expected_id": "doc_0094",
+   "also_relevant": [],
+   "ranks": {
+    "strict": {
+     "dense": 4,
+     "bm25": 11,
+     "rrf": 4,
+     "rrf+ce": 7,
+     "rrf_full": 4
+    },
+    "lenient": {
+     "dense": 4,
+     "bm25": 11,
+     "rrf": 4,
+     "rrf+ce": 7,
+     "rrf_full": 4
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0021",
+     "doc_0085",
+     "doc_0009"
+    ],
+    "bm25": [
+     "doc_0124",
+     "doc_0021",
+     "doc_0131"
+    ],
+    "rrf": [
+     "doc_0021",
+     "doc_0009",
+     "doc_0049"
+    ],
+    "rrf+ce": [
+     "doc_0009",
+     "doc_0049",
+     "doc_0123"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.25,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.09090909090909091,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.25,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.14285714285714285,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.25,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.09090909090909091,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.25,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 0.0,
+      "hit@3": 0.0,
+      "mrr": 0.14285714285714285,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "mix-14",
+   "bucket": "mixed",
+   "query": "How did Gargash describe the captain's actions?",
+   "expected_id": "doc_0135",
+   "also_relevant": [],
+   "ranks": {
+    "strict": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    },
+    "lenient": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0135",
+     "doc_0027",
+     "doc_0009"
+    ],
+    "bm25": [
+     "doc_0135",
+     "doc_1133",
+     "doc_0111"
+    ],
+    "rrf": [
+     "doc_0135",
+     "doc_0027",
+     "doc_0024"
+    ],
+    "rrf+ce": [
+     "doc_0135",
+     "doc_0024",
+     "doc_0142"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  },
+  {
+   "id": "mix-15",
+   "bucket": "mixed",
+   "query": "What did the Saudi National Transport Safety Center do at Tabuk?",
+   "expected_id": "doc_0140",
+   "also_relevant": [],
+   "ranks": {
+    "strict": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    },
+    "lenient": {
+     "dense": 1,
+     "bm25": 1,
+     "rrf": 1,
+     "rrf+ce": 1,
+     "rrf_full": 1
+    }
+   },
+   "top3": {
+    "dense": [
+     "doc_0140",
+     "doc_0119",
+     "doc_0124"
+    ],
+    "bm25": [
+     "doc_0140",
+     "doc_0020",
+     "doc_0093"
+    ],
+    "rrf": [
+     "doc_0140",
+     "doc_0119",
+     "doc_0124"
+    ],
+    "rrf+ce": [
+     "doc_0140",
+     "doc_0119",
+     "doc_0138"
+    ]
+   },
+   "metrics": {
+    "strict": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    },
+    "lenient": {
+     "dense": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "bm25": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     },
+     "rrf+ce": {
+      "hit@1": 1.0,
+      "hit@3": 1.0,
+      "mrr": 1.0,
+      "recall@50": 1.0
+     }
+    }
+   }
+  }
+ ]
+}
