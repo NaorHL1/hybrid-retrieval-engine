@@ -62,6 +62,16 @@ caveats apply. "Single query" means exactly that: not a general rate.
      text across all padded docs. `ingest.py` defaults to the length-matched file; set
      `LOOKALIKE_FILE=data/distractors_lookalike.json` for the short stress variant.
 
+9. **Candidate-count sweep** (`python -m eval.sweep`, `sweep_results.json`; lenient, 45 queries,
+   latency = median of 3 interleaved repeats): K=5/10/20/50 give Hit@3 0.82/0.82/0.82/0.89,
+   candidate recall 0.87/0.91/0.93/0.98, and about 140/340/650/1360 ms of cross-encoder time per
+   query. Cost is ~linear in K; quality is flat to K=20 and rises only at K=50 (3 queries).
+   Paired Hit@3 difference K=20 vs K=50 is -0.067, CI [-0.133, 0.000]: suggestive, not
+   established. K=20 would fail the 0.05 regression gate. `max_length=256` was only tried on one
+   query (not enough to conclude) and is not part of the sweep.
+10. **Paired bootstrap across stages** (see README): no overall Hit@3 difference between
+    neighboring stages excludes zero at n=45; Hit@1/MRR separate BM25 > dense and rrf+ce > rrf.
+
 ## Retracted
 - Drafting note for `sem-12` said the target was missing from the candidate pool. Wrong: the
   helper script hid the target from its own candidate list. In the v0 run it is rank 1 in

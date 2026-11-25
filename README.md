@@ -138,6 +138,16 @@ The first version of the look-alikes was about 3x shorter than the real targets,
 
 ### Cost
 * Dense search (including embedding the query) about 50 ms and BM25 about 14 ms per query at p50; the cross-encoder dominates the pipeline at about 1.3 to 1.7 s p50 for 50 candidates on this CPU-only machine (several eval runs, using `batch_size=8`).
+* **Candidate count (`python -m eval.sweep`)**, lenient, 45 queries; latency is the median per-query cross-encoder time over 3 interleaved repeats:
+
+  | candidates reranked (K) | candidate recall | Hit@1 | Hit@3 | cross-encoder ms/query |
+  |---|---|---|---|---|
+  | 5 | 0.87 | 0.71 | 0.82 | ~140 |
+  | 10 | 0.91 | 0.73 | 0.82 | ~340 |
+  | 20 | 0.93 | 0.73 | 0.82 | ~650 |
+  | 50 (production) | 0.98 | 0.76 | 0.89 | ~1360 |
+
+  Latency grows roughly linearly with K. Hit@3 is flat from K=5 to K=20 and rises only at K=50, a gain of 3 queries (0.067). The paired interval for K=20 vs K=50 is `[−0.13, 0.00]`, so the benefit of the extra candidates is suggestive, not established at n=45. Reducing K to 20 would halve the cross-encoder cost but would also trip the regression gate (a drop of 0.067 is more than 0.05), so changing K is a deliberate trade-off decision.
 * These are single-machine timings that vary a lot between runs (we saw 9 to 14 s per query for the same setting under load before a long document was removed and the batch size reduced), so treat them as indicative, not as a benchmark.
 
 ### Corrections to earlier claims
