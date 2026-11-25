@@ -82,15 +82,23 @@ def aggregate(per_query: list[dict], scope: str) -> dict:
 
 
 def paired_comparisons(per_query: list[dict]) -> dict:
-    """Hit@3 difference between neighboring stages with a paired bootstrap CI (overall)."""
+    """Difference between neighboring stages per metric and scope, with a paired bootstrap CI.
+    Layout: paired[mode][scope]["better - base"][metric] = {diff, ci95}."""
+    scopes = ["all"] + sorted({r["bucket"] for r in per_query})
     out = {}
     for mode in MODES:
         out[mode] = {}
-        for better, base in PAIRS:
-            a = [r["metrics"][mode][better]["hit@3"] for r in per_query]
-            b = [r["metrics"][mode][base]["hit@3"] for r in per_query]
-            mean, lo, hi = paired_bootstrap_diff(a, b)
-            out[mode][f"{better} - {base}"] = {"diff": round(mean, 4), "ci95": [round(lo, 4), round(hi, 4)]}
+        for scope in scopes:
+            rows = [r for r in per_query if scope == "all" or r["bucket"] == scope]
+            out[mode][scope] = {}
+            for better, base in PAIRS:
+                cell = {}
+                for metric in ("hit@1", "hit@3", "mrr"):
+                    a = [r["metrics"][mode][better][metric] for r in rows]
+                    b = [r["metrics"][mode][base][metric] for r in rows]
+                    mean, lo, hi = paired_bootstrap_diff(a, b)
+                    cell[metric] = {"diff": round(mean, 4), "ci95": [round(lo, 4), round(hi, 4)]}
+                out[mode][scope][f"{better} - {base}"] = cell
     return out
 
 
@@ -177,11 +185,16 @@ def print_report(results: dict) -> None:
         r = summary["all"][mode]["candidate_recall@50"]
         print(f"candidate Recall@50 (rrf top-50 reaches cross-encoder): {r['mean']:.2f} "
               f"[{r['ci95'][0]:.2f}-{r['ci95'][1]:.2f}]")
-        print("paired Hit@3 difference (same queries; 95% CI, 'excludes 0' = unlikely to be query noise):")
-        for name, p in results["paired"][mode].items():
-            lo, hi = p["ci95"]
-            verdict = "excludes 0" if lo > 0 or hi < 0 else "includes 0"
-            print(f"  {name:16} {p['diff']:+.3f}  [{lo:+.3f}, {hi:+.3f}]  {verdict}")
+        print("paired differences between neighboring stages (same queries). '*' = 95% CI excludes 0.")
+        print("  CAUTION: 36 intervals per mode; about 2 will exclude 0 by chance alone.")
+        print(f"  {'comparison':16} {'scope':>10} | {'Hit@1':>9} | {'Hit@3':>9} | {'MRR':>9}")
+        for scope, pairs in results["paired"][mode].items():
+            for name, cell in pairs.items():
+                cols = []
+                for metric in ("hit@1", "hit@3", "mrr"):
+                    p = cell[metric]; star = "*" if p["ci95"][0] > 0 or p["ci95"][1] < 0 else " "
+                    cols.append(f"{p['diff']:+.2f}{star}")
+                print(f"  {name:16} {scope:>10} | {cols[0]:>9} | {cols[1]:>9} | {cols[2]:>9}")
     print("\n=== latency per stage (ms, single run: indicative only) ===")
     for k, v in results["latency"].items():
         print(f"{k:6} p50={v['p50_ms']:>7}  max={v['max_ms']:>7}")
