@@ -11,3 +11,6 @@ wheels/
 
 # Database
 vector_database
+
+# eval run output (v0 diagnostic is committed as results_v0.json)
+eval/results.json

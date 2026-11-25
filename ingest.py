@@ -1,3 +1,4 @@
+import os
 import lancedb
 import json
 import pandas
@@ -16,6 +17,13 @@ def ingest_data_to_vector_db(table):
 
     # Synthetic distractors (doc_1001+): stress-test data, not news. See data/distractors_synthetic.json
     with open("data/distractors_synthetic.json", "r", encoding="utf-8") as file:
+        table.add(json.loads(file.read()))
+
+    # Synthetic look-alike identifiers (doc_1305+): near-miss IDs/names/numbers that must NOT
+    # answer any eval query. Used to test whether dense or BM25 confuses near-identical IDs.
+    # LOOKALIKE_FILE lets the eval compare short vs length-matched versions of the same set.
+    lookalike_path = os.environ.get("LOOKALIKE_FILE", "data/distractors_lookalike_long.json")
+    with open(lookalike_path, "r", encoding="utf-8") as file:
         table.add(json.loads(file.read()))
 
 def add_data_to_vector_db(table):
