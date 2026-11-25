@@ -15,6 +15,9 @@ DB_URI = "vector_database"
 TABLE_NAME = "flight_incident"
 CROSS_ENCODER_NAME = "cross-encoder/ms-marco-MiniLM-L-6-v2"
 FIELDS = ["id", "title", "text"]
+# Small batches limit padding waste: one long doc (e.g. doc_0096, 1543 tokens -> truncated
+# to 512) pads its whole batch to 512. Measured ~2x faster than the default 32 on 50 pairs.
+CE_BATCH_SIZE = 8
 
 _cross_encoder = None
 
@@ -50,7 +53,7 @@ def rerank(query: str, candidates: list[dict], top_k: int) -> list[dict]:
     if _cross_encoder is None:
         _cross_encoder = CrossEncoderReranker(model_name=CROSS_ENCODER_NAME).model
     pairs = [[query, f"{d['title']} - {d['text']}"] for d in candidates]
-    scores = _cross_encoder.predict(pairs)
+    scores = _cross_encoder.predict(pairs, batch_size=CE_BATCH_SIZE, show_progress_bar=False)
     scored = []
     for doc, score in zip(candidates, scores):
         scored.append({**doc, "cross_encoder_score": 1 / (1 + math.exp(-float(score)))})
