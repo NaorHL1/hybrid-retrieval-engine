@@ -1,4 +1,7 @@
-"""Per-stage retrieval eval.  Run:  python -m eval.run
+"""Per-stage retrieval eval.
+
+    python -m eval.run                   # score, print a table, write eval/results.json
+    python -m eval.run --write-baseline  # also freeze eval/baseline.json (deliberate act)
 
 Configurations (the RRF stage mirrors api.py: fuse with limit 1000, then cut to 50):
   dense    dense(q, 50)
@@ -6,9 +9,9 @@ Configurations (the RRF stage mirrors api.py: fuse with limit 1000, then cut to 
   rrf      hybrid_rrf(q, 1000)[:50]
   rrf+ce   cross-encoder rerank of those same 50 candidates
 
-Writes eval/results.json with aggregate metrics and per-query ranks (for traces).
 MRR is computed over the top 50 (a doc ranked below 50 counts as 0).
 """
+import datetime
 import json
 import os
 import statistics
@@ -18,16 +21,24 @@ from pathlib import Path
 
 os.environ.setdefault("LANCE_LOG", "error")  # silence lance scanner deprecation spam
 
-from eval.metrics import bootstrap_ci, first_rank, hit_at_k, reciprocal_rank, relevant_set
-from retrieval import bm25, dense, hybrid_rrf, open_table, rerank
+from eval.fingerprint import corpus_fingerprint, file_sha256
+from eval.gate import THRESHOLD, gated_values
+from eval.metrics import (
+    bootstrap_ci, first_rank, hit_at_k, paired_bootstrap_diff, reciprocal_rank, relevant_set,
+)
+from retrieval import (
+    CROSS_ENCODER_NAME, FIELDS, bm25, dense, hybrid_rrf, open_table, rerank,
+)
 
 EVAL_DIR = Path(__file__).parent
 QUERIES = EVAL_DIR / "queries.jsonl"
 RESULTS = EVAL_DIR / "results.json"
+BASELINE = EVAL_DIR / "baseline.json"
 RRF_POOL = 1000   # same as api.py
 CANDIDATES = 50   # same as api.py: what the cross-encoder sees
 CONFIGS = ["dense", "bm25", "rrf", "rrf+ce"]
 MODES = {"strict": False, "lenient": True}
+PAIRS = [("bm25", "dense"), ("rrf", "bm25"), ("rrf+ce", "rrf")]  # (better?, baseline)
 
 
 def load_queries(path: Path = QUERIES) -> list[dict]:
@@ -53,23 +64,46 @@ def run_query(table, q: str) -> tuple[dict, dict]:
     return ranked, {k: v * 1000 for k, v in timings.items()}
 
 
+def _ci(values: list[float]) -> dict:
+    mean, lo, hi = bootstrap_ci(values)
+    return {"mean": round(mean, 4), "ci95": [round(lo, 4), round(hi, 4)]}
+
+
 def aggregate(per_query: list[dict], scope: str) -> dict:
     rows = [r for r in per_query if scope == "all" or r["bucket"] == scope]
     out = {"n": len(rows)}
     for mode in MODES:
         out[mode] = {}
         for cfg in CONFIGS:
-            m = {}
-            for name in ("hit@1", "hit@3", "mrr"):
-                mean, lo, hi = bootstrap_ci([r["metrics"][mode][cfg][name] for r in rows])
-                m[name] = {"mean": round(mean, 4), "ci95": [round(lo, 4), round(hi, 4)]}
-            out[mode][cfg] = m
-        mean, lo, hi = bootstrap_ci([r["metrics"][mode]["rrf"]["recall@50"] for r in rows])
-        out[mode]["candidate_recall@50"] = {"mean": round(mean, 4), "ci95": [round(lo, 4), round(hi, 4)]}
+            out[mode][cfg] = {name: _ci([r["metrics"][mode][cfg][name] for r in rows])
+                              for name in ("hit@1", "hit@3", "mrr")}
+        out[mode]["candidate_recall@50"] = _ci([r["metrics"][mode]["rrf"]["recall@50"] for r in rows])
     return out
 
 
-def main() -> int:
+def paired_comparisons(per_query: list[dict]) -> dict:
+    """Hit@3 difference between neighboring stages with a paired bootstrap CI (overall)."""
+    out = {}
+    for mode in MODES:
+        out[mode] = {}
+        for better, base in PAIRS:
+            a = [r["metrics"][mode][better]["hit@3"] for r in per_query]
+            b = [r["metrics"][mode][base]["hit@3"] for r in per_query]
+            mean, lo, hi = paired_bootstrap_diff(a, b)
+            out[mode][f"{better} - {base}"] = {"diff": round(mean, 4), "ci95": [round(lo, 4), round(hi, 4)]}
+    return out
+
+
+def fingerprints(table) -> dict:
+    rows = table.search().select(FIELDS).limit(table.count_rows()).to_list()
+    return {
+        "corpus": corpus_fingerprint(rows),
+        "queries_sha256": file_sha256(QUERIES),
+        "rrf_pool": RRF_POOL, "candidates": CANDIDATES, "cross_encoder": CROSS_ENCODER_NAME,
+    }
+
+
+def run_eval() -> dict:
     queries = load_queries()
     table = open_table()
     rerank("warmup", [{"title": "", "text": ""}], 1)  # load the model outside the timings
@@ -99,22 +133,35 @@ def main() -> int:
         })
 
     scopes = ["all"] + sorted({q["bucket"] for q in queries})
-    summary = {s: aggregate(per_query, s) for s in scopes}
-    latency = {k: {"p50_ms": round(statistics.median(v), 1),
-                   "max_ms": round(max(v), 1)} for k, v in latencies.items()}
-
-    RESULTS.write_text(json.dumps({
+    return {
         "config": {"rrf_pool": RRF_POOL, "candidates": CANDIDATES, "n_queries": len(queries),
                    "bootstrap": {"n": 1000, "seed": 0, "ci": 0.95}},
-        "summary": summary, "latency": latency, "per_query": per_query,
-    }, indent=1, ensure_ascii=False), encoding="utf-8")
+        "fingerprint": fingerprints(table),
+        "summary": {s: aggregate(per_query, s) for s in scopes},
+        "paired": paired_comparisons(per_query),
+        "latency": {k: {"p50_ms": round(statistics.median(v), 1), "max_ms": round(max(v), 1)}
+                    for k, v in latencies.items()},
+        "per_query": per_query,
+    }
 
-    print_report(summary, latency, scopes)
-    print(f"\nwrote {RESULTS}")
-    return 0
+
+def write_baseline(results: dict, path: Path = BASELINE) -> dict:
+    ref = {mode: {cfg: {m: results["summary"]["all"][mode][cfg][m]["mean"] for m in ("hit@1", "hit@3", "mrr")}
+                  for cfg in CONFIGS} for mode in MODES}
+    baseline = {
+        "created": datetime.date.today().isoformat(),
+        "threshold": THRESHOLD,
+        "note": "Refreeze only on purpose: python -m eval.run --write-baseline, and review the diff.",
+        "fingerprint": results["fingerprint"],
+        "gated": gated_values(results["summary"]),
+        "reference_overall": ref,
+    }
+    path.write_text(json.dumps(baseline, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
+    return baseline
 
 
-def print_report(summary: dict, latency: dict, scopes: list[str]) -> None:
+def print_report(results: dict) -> None:
+    summary, scopes = results["summary"], list(results["summary"])
     for mode in MODES:
         print(f"\n=== {mode.upper()} (n={summary['all']['n']}) ===")
         head = f"{'config':8} | {'Hit@1':>5} | {'Hit@3  [95% CI]':>18} | {'MRR':>5} | " + " | ".join(
@@ -130,10 +177,26 @@ def print_report(summary: dict, latency: dict, scopes: list[str]) -> None:
         r = summary["all"][mode]["candidate_recall@50"]
         print(f"candidate Recall@50 (rrf top-50 reaches cross-encoder): {r['mean']:.2f} "
               f"[{r['ci95'][0]:.2f}-{r['ci95'][1]:.2f}]")
-    print("\n=== latency per stage (ms) ===")
-    for k, v in latency.items():
+        print("paired Hit@3 difference (same queries; 95% CI, 'excludes 0' = unlikely to be query noise):")
+        for name, p in results["paired"][mode].items():
+            lo, hi = p["ci95"]
+            verdict = "excludes 0" if lo > 0 or hi < 0 else "includes 0"
+            print(f"  {name:16} {p['diff']:+.3f}  [{lo:+.3f}, {hi:+.3f}]  {verdict}")
+    print("\n=== latency per stage (ms, single run: indicative only) ===")
+    for k, v in results["latency"].items():
         print(f"{k:6} p50={v['p50_ms']:>7}  max={v['max_ms']:>7}")
 
 
+def main(argv: list[str]) -> int:
+    results = run_eval()
+    RESULTS.write_text(json.dumps(results, indent=1, ensure_ascii=False), encoding="utf-8")
+    print_report(results)
+    print(f"\nwrote {RESULTS}")
+    if "--write-baseline" in argv:
+        write_baseline(results)
+        print(f"wrote {BASELINE} (gated: {gated_values(results['summary'])})")
+    return 0
+
+
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(main(sys.argv[1:]))

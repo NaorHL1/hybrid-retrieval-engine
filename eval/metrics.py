@@ -42,3 +42,13 @@ def bootstrap_ci(values: list[float], n_boot: int = 1000, seed: int = 0,
     lo = means[int((alpha / 2) * n_boot)]
     hi = means[min(n_boot - 1, int((1 - alpha / 2) * n_boot))]
     return sum(values) / size, lo, hi
+
+
+def paired_bootstrap_diff(a: list[float], b: list[float], n_boot: int = 1000, seed: int = 0,
+                          alpha: float = 0.05) -> tuple[float, float, float]:
+    """Mean of (a - b) per query and its percentile CI. Resamples *queries*, so both configs
+    always see the same queries; this is the right way to ask "is config a really better than b?".
+    If the CI excludes 0, the gap is unlikely to be query-sampling noise."""
+    if len(a) != len(b):
+        raise ValueError("a and b must have the same length (one value per query)")
+    return bootstrap_ci([x - y for x, y in zip(a, b)], n_boot=n_boot, seed=seed, alpha=alpha)

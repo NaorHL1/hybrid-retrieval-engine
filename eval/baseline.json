@@ -1,0 +1,65 @@
+{
+ "created": "2026-11-25",
+ "threshold": 0.05,
+ "note": "Refreeze only on purpose: python -m eval.run --write-baseline, and review the diff.",
+ "fingerprint": {
+  "corpus": {
+   "n_docs": 495,
+   "sha256": "05f1e3e022c08aad25715d4fa548775cc36506ff852f6892ab791b1e3d665f22"
+  },
+  "queries_sha256": "e0cd4d79f40e385e43bf8f23977f2b8b58b8eb690b18b8926a70f611b79b4b2c",
+  "rrf_pool": 1000,
+  "candidates": 50,
+  "cross_encoder": "cross-encoder/ms-marco-MiniLM-L-6-v2"
+ },
+ "gated": {
+  "rrf+ce hit@3 (lenient)": 0.8889,
+  "candidate recall@50 (lenient)": 0.9778
+ },
+ "reference_overall": {
+  "strict": {
+   "dense": {
+    "hit@1": 0.4222,
+    "hit@3": 0.6667,
+    "mrr": 0.5733
+   },
+   "bm25": {
+    "hit@1": 0.6222,
+    "hit@3": 0.7556,
+    "mrr": 0.7015
+   },
+   "rrf": {
+    "hit@1": 0.5111,
+    "hit@3": 0.7778,
+    "mrr": 0.6577
+   },
+   "rrf+ce": {
+    "hit@1": 0.6889,
+    "hit@3": 0.8444,
+    "mrr": 0.7722
+   }
+  },
+  "lenient": {
+   "dense": {
+    "hit@1": 0.4667,
+    "hit@3": 0.7333,
+    "mrr": 0.6157
+   },
+   "bm25": {
+    "hit@1": 0.6889,
+    "hit@3": 0.8,
+    "mrr": 0.7547
+   },
+   "rrf": {
+    "hit@1": 0.5556,
+    "hit@3": 0.8222,
+    "mrr": 0.6977
+   },
+   "rrf+ce": {
+    "hit@1": 0.7556,
+    "hit@3": 0.8889,
+    "mrr": 0.8261
+   }
+  }
+ }
+}
