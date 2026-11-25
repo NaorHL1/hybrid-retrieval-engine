@@ -18,6 +18,11 @@ def ingest_data_to_vector_db(table):
     with open("data/distractors_synthetic.json", "r", encoding="utf-8") as file:
         table.add(json.loads(file.read()))
 
+    # Synthetic look-alike identifiers (doc_1305+): near-miss IDs/names/numbers that must NOT
+    # answer any eval query. Used to test whether dense or BM25 confuses near-identical IDs.
+    with open("data/distractors_lookalike.json", "r", encoding="utf-8") as file:
+        table.add(json.loads(file.read()))
+
 def add_data_to_vector_db(table):
    more_data = [
             {
