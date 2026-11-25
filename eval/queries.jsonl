@@ -13,3 +13,18 @@
 {"id": "sem-13", "bucket": "semantic", "query": "How many passengers flew Dubai to Tel Aviv on the route since 2 October?", "expected_id": "doc_0152", "also_relevant": [], "verified": true}
 {"id": "sem-14", "bucket": "semantic", "query": "Which foreign head of government spoke to the injured commander from his hospital room?", "expected_id": "doc_0125", "also_relevant": ["doc_0155"], "verified": true, "note": "doc_0155 is borderline: names Modi but does not say they spoke directly"}
 {"id": "sem-15", "bucket": "semantic", "query": "Had he rehearsed the route on earlier trips before the attack?", "expected_id": "doc_0147", "also_relevant": [], "verified": true, "note": "0051 is an aborted earlier attack, not reconnaissance: not counted"}
+{"id": "idn-01", "bucket": "identifier", "query": "A6-FKF", "expected_id": "doc_0003", "also_relevant": [], "verified": true}
+{"id": "idn-02", "bucket": "identifier", "query": "+971 54 232 3578", "expected_id": "doc_0077", "also_relevant": [], "verified": true}
+{"id": "idn-03", "bucket": "identifier", "query": "transponder code 7700", "expected_id": "doc_0118", "also_relevant": ["doc_0008"], "verified": true}
+{"id": "idn-04", "bucket": "identifier", "query": "FZ1081", "expected_id": "doc_0134", "also_relevant": [], "verified": true}
+{"id": "idn-05", "bucket": "identifier", "query": "Air Transport Law 1980", "expected_id": "doc_0104", "also_relevant": ["doc_0096"], "verified": true, "note": "doc_0096 is a full-article parent doc that contains the chunk text"}
+{"id": "idn-06", "bucket": "identifier", "query": "Iberia Airlines v. Fleischer Peled", "expected_id": "doc_0107", "also_relevant": ["doc_0096", "doc_0106"], "verified": true, "note": "benchmark.py had doc_0106, but only 0107 and 0096 contain the case name; 0106 describes the same case without the full name"}
+{"id": "idn-07", "bucket": "identifier", "query": "Victims of Hostile Actions (Pensions) Law, 1970", "expected_id": "doc_0115", "also_relevant": ["doc_0096"], "verified": true, "note": "doc_0096 is a full-article parent doc"}
+{"id": "idn-08", "bucket": "identifier", "query": "17:40 local time", "expected_id": "doc_0139", "also_relevant": [], "verified": true, "note": "dense rank 26 vs bm25 rank 1 when drafted (single query)"}
+{"id": "idn-09", "bucket": "identifier", "query": "Ghaith Al Ghaith", "expected_id": "doc_0153", "also_relevant": [], "verified": true}
+{"id": "idn-10", "bucket": "identifier", "query": "Eyal Zamir", "expected_id": "doc_0021", "also_relevant": [], "verified": true, "note": "bm25 returned no match when drafted: source text is glued as 'staffEyal Zamirheld'"}
+{"id": "idn-11", "bucket": "identifier", "query": "Richard J. Levy", "expected_id": "doc_0027", "also_relevant": [], "verified": true}
+{"id": "idn-12", "bucket": "identifier", "query": "Royal Air Maroc", "expected_id": "doc_0145", "also_relevant": [], "verified": true}
+{"id": "idn-13", "bucket": "identifier", "query": "Humam Khalil Abu-Mulal al-Balawi", "expected_id": "doc_0016", "also_relevant": ["doc_0002"], "verified": true}
+{"id": "idn-14", "bucket": "identifier", "query": "7,479 passengers", "expected_id": "doc_0152", "also_relevant": [], "verified": true}
+{"id": "idn-15", "bucket": "identifier", "query": "10:45 a.m. GST (9:45 a.m. SAST)", "expected_id": "doc_0011", "also_relevant": [], "verified": true, "note": "dense rank 173 vs bm25 rank 2 when drafted (single query)"}
