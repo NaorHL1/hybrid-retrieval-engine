@@ -1,6 +1,6 @@
 # Eval findings (running log)
 
-Evidence behind the numbers in `results_v0.json` and `results_v1_no_parent_doc.json`.
+Evidence behind the numbers in `results_v0.json` .. `results_v4_baseline_run.json` and `sweep_results.json`.
 Everything here was measured on this repo's 45-query set (15 per bucket); small-sample
 caveats apply. "Single query" means exactly that: not a general rate.
 
