@@ -1,0 +1,1522 @@
+[
+  {
+    "id": "doc_1001",
+    "title": "Aircraft wheel brake wear limits",
+    "text": "Maintenance manuals set a wear limit for carbon brake discs. Technicians measure the pad thickness at each check and log the result in the maintenance tracking system."
+  },
+  {
+    "id": "doc_1002",
+    "title": "Crosswind landing technique for light aircraft",
+    "text": "Pilots of light aircraft often crab into a crosswind on final approach, then align the nose with the runway just before touchdown. Practice on windy days builds the habit."
+  },
+  {
+    "id": "doc_1003",
+    "title": "Airline seat pitch and cabin layout planning",
+    "text": "Cabin planners weigh seat pitch against passenger comfort and cost per seat. A denser layout adds revenue but can lengthen boarding and evacuation times."
+  },
+  {
+    "id": "doc_1004",
+    "title": "Revenue management fare buckets",
+    "text": "Revenue teams split each flight's seats into fare buckets with different prices. Booking curves show how fast each bucket sells, and the team closes cheap buckets when demand rises."
+  },
+  {
+    "id": "doc_1005",
+    "title": "Baggage reconciliation at transfer hubs",
+    "text": "At transfer hubs, baggage systems scan each bag twice. A mismatch between the scan log and the passenger manifest triggers a manual trace by the ground team."
+  },
+  {
+    "id": "doc_1006",
+    "title": "Weather radar attenuation in heavy rain",
+    "text": "Heavy rain absorbs part of the radar signal, which weakens returns from storms further away. Forecasters correct for this using dual-polarisation data where it is available."
+  },
+  {
+    "id": "doc_1007",
+    "title": "Runway friction reporting",
+    "text": "Airport operators report runway friction after rain or snow using a braking coefficient. Crews compare the reported value with their aircraft's landing performance table before approach."
+  },
+  {
+    "id": "doc_1008",
+    "title": "Fuel planning reserve calculation",
+    "text": "A dispatch fuel plan adds a contingency fuel margin, a final reserve, and an alternate fuel allowance. Planners adjust the totals for forecast winds on the route."
+  },
+  {
+    "id": "doc_1009",
+    "title": "Air traffic flow management slot allocation",
+    "text": "Flow managers assign departure slots when a sector is over capacity. Airlines can swap slots within their own schedule but cannot trade them with other carriers in this scheme."
+  },
+  {
+    "id": "doc_1010",
+    "title": "Cabin crew recurrent training cycle",
+    "text": "Cabin crew complete emergency drills every twelve months. The drills cover fire, depressurisation, ditching, and door operation, with a written test at the end."
+  },
+  {
+    "id": "doc_1011",
+    "title": "Jet engine borescope inspection",
+    "text": "Technicians insert a borescope through a port in the engine case to inspect compressor blades. Findings outside the limits are recorded, photographed, and reviewed by an engineer."
+  },
+  {
+    "id": "doc_1012",
+    "title": "Avionics software change control",
+    "text": "Each change to flight management software goes through a review board. The board checks the safety assessment, the test evidence, and the rollback plan before release."
+  },
+  {
+    "id": "doc_1013",
+    "title": "Lithium battery rules for passengers",
+    "text": "Passengers may carry spare lithium batteries in cabin baggage within stated watt-hour limits. Power banks must not be placed in checked baggage, and the crew can ask for them to be stored in a safe place."
+  },
+  {
+    "id": "doc_1014",
+    "title": "Ground handling turnaround target",
+    "text": "A narrow-body turnaround target is often about 45 minutes. Each task, from chocks to boarding, is scheduled and tracked by the handling agent."
+  },
+  {
+    "id": "doc_1015",
+    "title": "Pilot fatigue risk management",
+    "text": "Airlines use fatigue models to plan duty and rest. Crews can file a fatigue report after a duty period, and the report triggers a review of the roster."
+  },
+  {
+    "id": "doc_1016",
+    "title": "Flight simulator recurrent training",
+    "text": "Simulator sessions test engine failure, go-around, and windshear procedures. Instructors score each manoeuvre against the operator's checklist."
+  },
+  {
+    "id": "doc_1017",
+    "title": "Airport perimeter fence intrusion detection",
+    "text": "Fence sensors detect climbing and cutting. Each alarm is checked on the camera system, and the security team logs whether it was a false alarm or an actual breach."
+  },
+  {
+    "id": "doc_1018",
+    "title": "Wake turbulence separation minima",
+    "text": "Controllers keep greater distance behind heavy aircraft during approach. The minimum depends on the weight category of the leading and following aircraft."
+  },
+  {
+    "id": "doc_1019",
+    "title": "Cargo hold fire suppression",
+    "text": "Cargo holds have detection and extinguishing systems. Crews receive a fire warning in the cockpit and follow a checklist to isolate ventilation and discharge the agent."
+  },
+  {
+    "id": "doc_1020",
+    "title": "Aircraft weight and balance sheet",
+    "text": "Load controllers compute the aircraft's weight and centre of gravity before each departure. The sheet must stay inside the envelope for the planned fuel and payload."
+  },
+  {
+    "id": "doc_1021",
+    "title": "Deicing fluid types and holdover time",
+    "text": "Type I fluid is used for quick deicing, and Type IV is applied as an anti-icing layer. The holdover time depends on the fluid type, the temperature, and the precipitation rate."
+  },
+  {
+    "id": "doc_1022",
+    "title": "Air cargo dangerous goods acceptance",
+    "text": "Cargo staff check dangerous goods declarations before accepting a shipment. Packing, labelling, and quantity limits must match the regulations for the carriage mode."
+  },
+  {
+    "id": "doc_1023",
+    "title": "Low-cost carrier ancillary revenue",
+    "text": "Ancillary fees for bags, seat selection, and priority boarding make up a large share of revenue for some low-cost carriers. Their pricing pages show these fees before checkout."
+  },
+  {
+    "id": "doc_1024",
+    "title": "Airport lounge access policy",
+    "text": "Lounge access is granted by card tier, ticket class, or a day pass. Lounges publish capacity limits and may restrict access during peak banks of departures."
+  },
+  {
+    "id": "doc_1025",
+    "title": "Hotel room block management for airlines",
+    "text": "Airline crew hotels use room blocks signed months in advance. Crew scheduling sends the daily list of names, and the hotel releases unused rooms by a fixed cutoff."
+  },
+  {
+    "id": "doc_1026",
+    "title": "Taxi and ride-hailing airport zones",
+    "text": "Airports separate pickup zones for taxis, ride-hailing, and private cars. Signage and geofenced pickup points reduce congestion at the terminal kerb."
+  },
+  {
+    "id": "doc_1027",
+    "title": "Passport control queue modelling",
+    "text": "Simulation of passport control uses arrival bunching and desk service times. The model shows how many desks are needed to keep the average wait under a set target."
+  },
+  {
+    "id": "doc_1028",
+    "title": "Airport noise abatement procedures",
+    "text": "Noise abatement departures use a reduced thrust climb and a turn after a set altitude. Operators publish these procedures for each runway and check compliance with noise monitors."
+  },
+  {
+    "id": "doc_1029",
+    "title": "Emergency evacuation slide certification",
+    "text": "Evacuation slides are tested for deployment time and passenger load before certification. Each slide is inspected at a fixed interval and after any deployment."
+  },
+  {
+    "id": "doc_1030",
+    "title": "Oxygen mask deployment in cabins",
+    "text": "Oxygen masks drop automatically when cabin altitude rises above a set level. Crew instruct passengers to put on their own mask first, then assist others."
+  },
+  {
+    "id": "doc_1031",
+    "title": "Transatlantic route planning with jet streams",
+    "text": "Dispatchers choose tracks that use favourable jet stream winds. Wind forecasts update the optimal track before departure and during the flight."
+  },
+  {
+    "id": "doc_1032",
+    "title": "Helicopter offshore transfer safety",
+    "text": "Offshore helicopter operations require survival training, life jackets, and a briefing before each flight. Weather minima are stricter at night and over open water."
+  },
+  {
+    "id": "doc_1033",
+    "title": "Flight attendant boarding script",
+    "text": "Flight attendants greet passengers at the door and check the boarding pass. The script includes a reminder about the safety card and the location of exits."
+  },
+  {
+    "id": "doc_1034",
+    "title": "Remote tower air traffic control trial",
+    "text": "A remote tower system uses cameras and sensors to provide air traffic service from a distant control room. Trials compare the workload and safety outcomes with traditional towers."
+  },
+  {
+    "id": "doc_1035",
+    "title": "Aircraft livery paint weight",
+    "text": "Full-body paint adds weight, which reduces payload and increases fuel burn. Airlines weigh the paint scheme against the brand benefit when designing a new livery."
+  },
+  {
+    "id": "doc_1036",
+    "title": "Turbulence reporting by pilots",
+    "text": "Pilots report turbulence through air traffic control and company systems. The reports help forecasters update turbulence charts for other flights on the same route."
+  },
+  {
+    "id": "doc_1037",
+    "title": "Hub airport connection time",
+    "text": "Connection times at hubs depend on terminal distance, security, and transfer baggage handling. Airlines publish minimum connection times for each airport and terminal pair."
+  },
+  {
+    "id": "doc_1038",
+    "title": "Pilot medical certificate classes",
+    "text": "Pilots hold medical certificates in classes that set the frequency of checks. Stricter classes apply to airline pilots carrying passengers."
+  },
+  {
+    "id": "doc_1039",
+    "title": "Airport lighting maintenance",
+    "text": "Runway and taxiway lights are checked on a fixed schedule. Failed fittings are logged, and the airport issues a NOTAM if a lighting section is out of service."
+  },
+  {
+    "id": "doc_1040",
+    "title": "Air freight rates and volume",
+    "text": "Air freight rates move with fuel prices, capacity, and seasonal demand. Forwarders publish weekly indices and advise shippers on booking windows."
+  },
+  {
+    "id": "doc_1041",
+    "title": "Aviation insurance hull and liability",
+    "text": "Aviation insurance covers the hull of an aircraft and the operator's third-party liability. Policies set limits, deductibles, and conditions for war and terrorism risks."
+  },
+  {
+    "id": "doc_1042",
+    "title": "Wind shear detection on approach",
+    "text": "Wind shear alerts warn of sudden changes in headwind or tailwind. Crews are trained to go around if the alert triggers below a set height."
+  },
+  {
+    "id": "doc_1043",
+    "title": "Gate allocation optimisation",
+    "text": "Gate allocation software assigns aircraft to gates to reduce walking distance and idle time. Planners adjust for late arrivals and aircraft that need longer stands."
+  },
+  {
+    "id": "doc_1044",
+    "title": "Cabin air quality filters",
+    "text": "Cabin air is recirculated through HEPA filters that capture most particles. Filters are replaced on a schedule set by the aircraft manufacturer and the airline."
+  },
+  {
+    "id": "doc_1045",
+    "title": "Aircraft tyre pressure checks",
+    "text": "Tyre pressure is checked before each departure and after long taxi times. Low pressure is recorded and the tyre is inspected before the next flight."
+  },
+  {
+    "id": "doc_1046",
+    "title": "Engine run-up procedure",
+    "text": "Engine run-up checks are performed after maintenance before the aircraft is released. The procedure monitors vibration, oil pressure, and exhaust temperature."
+  },
+  {
+    "id": "doc_1047",
+    "title": "Pilot briefing for a diversion",
+    "text": "A diversion briefing covers the alternate airport, fuel remaining, weather at the alternate, and the passenger handling plan. The captain confirms the plan with the cabin crew."
+  },
+  {
+    "id": "doc_1048",
+    "title": "Flight plan filing deadlines",
+    "text": "Flight plans are filed with air navigation service providers within set times before departure. Late filings can delay slots and clearances."
+  },
+  {
+    "id": "doc_1049",
+    "title": "Passenger rights for delayed flights",
+    "text": "Passenger rights rules set compensation and care levels for long delays and cancellations. The thresholds depend on the distance of the flight and the cause of the delay."
+  },
+  {
+    "id": "doc_1050",
+    "title": "Airport fire and rescue category",
+    "text": "Airports are assigned a fire and rescue category by aircraft size and movements. The category sets the number of vehicles and the agent quantities required on the field."
+  },
+  {
+    "id": "doc_1051",
+    "title": "Ground power unit use at stands",
+    "text": "Ground power units supply electricity to parked aircraft so auxiliary power units can be shut down. Airports reduce fuel use and noise this way."
+  },
+  {
+    "id": "doc_1052",
+    "title": "Dispatch reliability metrics",
+    "text": "Dispatch reliability measures the share of departures without a delay caused by technical faults. Airlines track it by fleet type and by station."
+  },
+  {
+    "id": "doc_1053",
+    "title": "Crew rest facility design",
+    "text": "Long-haul aircraft carry crew rest areas with bunks. Standards set minimum size, lighting, noise limits, and fire protection for each bunk."
+  },
+  {
+    "id": "doc_1054",
+    "title": "Air navigation charges",
+    "text": "Air navigation charges are billed per flight by distance and aircraft weight. Airlines audit the charges against their flight records."
+  },
+  {
+    "id": "doc_1055",
+    "title": "Hijack prevention training for cabin crew",
+    "text": "Cabin crew receive training on recognising threats and responding to unruly passengers. The course covers communication, restraint limits, and cockpit access rules."
+  },
+  {
+    "id": "doc_1056",
+    "title": "Aviation wildlife strike reduction",
+    "text": "Airports reduce bird strikes by managing grass height, water ponds, and food waste. Strike reports are analysed each year to target the highest-risk months."
+  },
+  {
+    "id": "doc_1057",
+    "title": "Cockpit voice recorder data retention",
+    "text": "Cockpit voice recorders keep the last two hours of audio in many current aircraft. Operators must preserve the data after an event under the investigation rules."
+  },
+  {
+    "id": "doc_1058",
+    "title": "Flight data monitoring program",
+    "text": "A flight data monitoring program reviews routine flight data to find unsafe trends. The findings are shared with the crew without disciplinary action, under a just culture policy."
+  },
+  {
+    "id": "doc_1059",
+    "title": "Air charter quality audit",
+    "text": "Charter operators are audited for crew qualifications, maintenance records, and insurance. Audits follow a checklist, and findings must be closed within a set time."
+  },
+  {
+    "id": "doc_1060",
+    "title": "Pilot training in upset recovery",
+    "text": "Upset recovery training teaches pilots to recover from unusual attitudes. Simulators reproduce stalls, spiral dives, and loss of control in controlled conditions."
+  },
+  {
+    "id": "doc_1061",
+    "title": "Air navigation GPS interference",
+    "text": "GPS interference can degrade navigation accuracy. Crews are trained to cross-check position with ground navigation aids and to report suspected interference."
+  },
+  {
+    "id": "doc_1062",
+    "title": "Aircraft lease return conditions",
+    "text": "Lease return conditions set the state of the aircraft at return, including maintenance status, paint, and cabin condition. Disputes are usually settled by an independent inspection."
+  },
+  {
+    "id": "doc_1063",
+    "title": "Aircraft noise certificate",
+    "text": "Aircraft noise certificates list the noise levels at reference points for takeoff, approach, and flyover. Operators must meet the limits for their airports."
+  },
+  {
+    "id": "doc_1064",
+    "title": "Tower staffing and shift patterns",
+    "text": "Tower staffing follows shift patterns that limit consecutive night shifts. Supervisors adjust the roster when traffic forecasts change."
+  },
+  {
+    "id": "doc_1065",
+    "title": "Holiday travel demand forecasting",
+    "text": "Demand forecasts for holiday travel use booking data, past seasons, and calendar effects. Airlines adjust capacity months ahead of the peak."
+  },
+  {
+    "id": "doc_1066",
+    "title": "Terminal wayfinding signage design",
+    "text": "Terminal signage uses standard symbols and colours. Usability tests check whether travellers can find gates within a set time without asking staff."
+  },
+  {
+    "id": "doc_1067",
+    "title": "Aircraft cabin lighting modes",
+    "text": "Cabin lighting modes support sleep, meal service, and boarding. Crews can select a mode from the cabin panel."
+  },
+  {
+    "id": "doc_1068",
+    "title": "Wet lease agreements",
+    "text": "A wet lease provides an aircraft with crew, maintenance, and insurance from another operator. The contracting airline controls the schedule and the branding."
+  },
+  {
+    "id": "doc_1069",
+    "title": "Airline alliance codeshare agreements",
+    "text": "Codeshare agreements let one airline sell seats on another airline's flights. The partners share revenue and agree on service standards and baggage rules."
+  },
+  {
+    "id": "doc_1070",
+    "title": "Airport slot coordination in peak hours",
+    "text": "Airports with high demand use slot coordination to limit movements per hour. Slots are held by carriers under use-it-or-lose-it rules."
+  },
+  {
+    "id": "doc_1071",
+    "title": "Pre-flight passenger safety briefing",
+    "text": "The safety briefing covers seat belts, exits, oxygen masks, and life jackets. Crews demonstrate the equipment and check that passengers have read the card."
+  },
+  {
+    "id": "doc_1072",
+    "title": "Retrieval-augmented generation chunk size",
+    "text": "Chunk size controls how much context each retrieved passage carries. Small chunks improve precision, while large chunks keep more context but dilute the match."
+  },
+  {
+    "id": "doc_1073",
+    "title": "Vector index HNSW parameters",
+    "text": "HNSW indexes have two main build parameters: the number of neighbours per node and the search depth during construction. Higher values improve recall at the cost of memory and build time."
+  },
+  {
+    "id": "doc_1074",
+    "title": "BM25 term frequency saturation",
+    "text": "BM25 limits how much a repeated term can raise a score. The saturation parameter controls how quickly the gain levels off as term frequency rises."
+  },
+  {
+    "id": "doc_1075",
+    "title": "Reciprocal rank fusion constant",
+    "text": "Reciprocal rank fusion adds the inverse of each rank to a score. The constant in the denominator dampens the effect of top ranks, and a common default is around sixty."
+  },
+  {
+    "id": "doc_1076",
+    "title": "Cross-encoder latency budget",
+    "text": "Cross-encoders read the query and document together, which is slower than bi-encoders. Teams often rerank only the top candidates to stay within a latency budget."
+  },
+  {
+    "id": "doc_1077",
+    "title": "Embedding model quantisation",
+    "text": "Quantising an embedding model reduces its memory footprint and can speed up inference on CPU. The trade-off is a small drop in retrieval quality that should be measured on your own queries."
+  },
+  {
+    "id": "doc_1078",
+    "title": "Evaluation set labelling guidelines",
+    "text": "Labelling guidelines define what counts as a relevant document for each query. Two annotators should label a sample, and disagreements should be resolved in writing."
+  },
+  {
+    "id": "doc_1079",
+    "title": "Hit rate at k metric",
+    "text": "Hit rate at k counts the share of queries where the correct document appears in the top k results. It is simple to compute but says nothing about the rank within the top k."
+  },
+  {
+    "id": "doc_1080",
+    "title": "Mean reciprocal rank explained",
+    "text": "Mean reciprocal rank averages the inverse of the rank of the first correct result. It rewards systems that place the right answer near the top."
+  },
+  {
+    "id": "doc_1081",
+    "title": "Vector database backup strategy",
+    "text": "A vector database backup should capture both the table data and the index files. Restores must be tested, because an index can be rebuilt but the rebuild may take hours."
+  },
+  {
+    "id": "doc_1082",
+    "title": "Streaming ingestion of documents",
+    "text": "Streaming ingestion writes new documents as they arrive, without a full rebuild. Index updates should be batched to avoid degrading query latency."
+  },
+  {
+    "id": "doc_1083",
+    "title": "Metadata filtering before vector search",
+    "text": "Pre-filtering applies metadata conditions before the vector search, which narrows the candidate set. Post-filtering can return fewer results than requested when the filter is strict."
+  },
+  {
+    "id": "doc_1084",
+    "title": "Chunk overlap for long documents",
+    "text": "Overlapping chunks help keep a sentence that spans a boundary inside at least one chunk. The overlap size is a trade-off between index size and recall."
+  },
+  {
+    "id": "doc_1085",
+    "title": "PDF text extraction quality",
+    "text": "PDF extraction can scramble columns and tables. Teams compare extractor output against a small hand-checked sample before indexing a large batch."
+  },
+  {
+    "id": "doc_1086",
+    "title": "Query rewriting with a small model",
+    "text": "A query rewriter expands abbreviations and adds synonyms before retrieval. It can help recall, but a bad rewrite can drift the query away from the user's intent."
+  },
+  {
+    "id": "doc_1087",
+    "title": "Re-ranking with reciprocal scores",
+    "text": "Combining scores from different retrievers needs normalisation, or one scale dominates. Rank-based fusion avoids this by using positions instead of raw scores."
+  },
+  {
+    "id": "doc_1088",
+    "title": "Search result snippet highlighting",
+    "text": "Snippet highlighting marks the query terms in the returned text. It helps reviewers see why a result matched, even when the match was semantic."
+  },
+  {
+    "id": "doc_1089",
+    "title": "Latency percentile reporting",
+    "text": "Report p50, p95, and p99 latency for search endpoints, not only the average. Tail latency is what users notice during load spikes."
+  },
+  {
+    "id": "doc_1090",
+    "title": "Load testing a search API",
+    "text": "Load tests ramp up concurrent requests and measure error rate and latency. Test with realistic query mixes, because cached queries can hide slow paths."
+  },
+  {
+    "id": "doc_1091",
+    "title": "FastAPI dependency injection pattern",
+    "text": "FastAPI dependencies can supply database connections per request. Shared resources such as models should be loaded once at startup, not per call."
+  },
+  {
+    "id": "doc_1092",
+    "title": "Asynchronous database connections",
+    "text": "Async database drivers let a server handle other requests while waiting on I/O. Blocking calls inside an async handler stall the whole event loop."
+  },
+  {
+    "id": "doc_1093",
+    "title": "Python packaging with uv",
+    "text": "The uv tool manages Python versions, virtual environments, and lock files. A lock file pins exact dependency versions so installs are reproducible."
+  },
+  {
+    "id": "doc_1094",
+    "title": "Pytest fixtures for API tests",
+    "text": "Test fixtures create a clean client and seed data for each test. Scope fixtures to the module when setup is expensive."
+  },
+  {
+    "id": "doc_1095",
+    "title": "Streamlit session state basics",
+    "text": "Streamlit reruns the script on each interaction, so state must be kept in session state. Caching expensive loads avoids reloading models on every rerun."
+  },
+  {
+    "id": "doc_1096",
+    "title": "Docker compose for local services",
+    "text": "Docker compose starts several services with one file. Health checks make the dependent service wait until its database is ready."
+  },
+  {
+    "id": "doc_1097",
+    "title": "Logging structured events",
+    "text": "Structured logs write key-value fields rather than free text. This makes it easier to filter by request id and measure stage timings."
+  },
+  {
+    "id": "doc_1098",
+    "title": "Rate limiting an API",
+    "text": "Rate limits protect an API from bursts. Token bucket and sliding window are the two common algorithms, and limits should be returned in response headers."
+  },
+  {
+    "id": "doc_1099",
+    "title": "Schema migrations for a relational database",
+    "text": "Schema migrations are versioned scripts that change tables in order. Each migration should be reversible or paired with a backup plan."
+  },
+  {
+    "id": "doc_1100",
+    "title": "Feature flags for safe releases",
+    "text": "Feature flags turn a new code path on for a small group first. Flags should be removed after the rollout to keep the code simple."
+  },
+  {
+    "id": "doc_1101",
+    "title": "Git branching for small teams",
+    "text": "Short-lived feature branches merged through pull requests keep history readable. Rebase before merging when the branch has drifted from main."
+  },
+  {
+    "id": "doc_1102",
+    "title": "Code review checklist for data pipelines",
+    "text": "A review checklist for pipelines covers idempotent writes, retry behaviour, schema changes, and logging. Reviewers also check the test data for personal information."
+  },
+  {
+    "id": "doc_1103",
+    "title": "Data anonymisation before sharing",
+    "text": "Anonymisation removes direct identifiers and reduces the risk of re-identification. Teams should test the output with a linkage attack before sharing a dataset."
+  },
+  {
+    "id": "doc_1104",
+    "title": "Role-based access control design",
+    "text": "Role-based access control grants permissions through roles rather than individual users. Reviews of role assignments should happen on a fixed schedule."
+  },
+  {
+    "id": "doc_1105",
+    "title": "Secrets rotation policy",
+    "text": "Secrets such as API keys should rotate on a fixed schedule and after any suspected exposure. Rotation scripts reduce the chance of a missed update."
+  },
+  {
+    "id": "doc_1106",
+    "title": "Threat modelling for a web service",
+    "text": "Threat modelling lists the assets, the trust boundaries, and the likely attacks. Each threat gets a mitigation or a documented risk acceptance."
+  },
+  {
+    "id": "doc_1107",
+    "title": "Phishing awareness for staff",
+    "text": "Phishing training sends simulated emails and tracks who clicks. Follow-up coaching works better than public shaming for changing habits."
+  },
+  {
+    "id": "doc_1108",
+    "title": "Backup encryption keys",
+    "text": "Backup encryption keys must be stored apart from the backups. Losing the key makes the backup unreadable, so key custody needs a written procedure."
+  },
+  {
+    "id": "doc_1109",
+    "title": "Incident response retrospective",
+    "text": "A retrospective after an incident records the timeline, the decisions, and the actions. The document focuses on system changes rather than individual blame."
+  },
+  {
+    "id": "doc_1110",
+    "title": "Vendor security questionnaire",
+    "text": "Vendors answer security questionnaires about encryption, access control, and incident handling. Answers should be checked against evidence such as audit reports."
+  },
+  {
+    "id": "doc_1111",
+    "title": "Cloud cost monitoring alerts",
+    "text": "Cost alerts notify a team when spending passes a threshold. Tagging resources by owner makes it easier to find the source of a spike."
+  },
+  {
+    "id": "doc_1112",
+    "title": "Kubernetes resource requests and limits",
+    "text": "Resource requests guide the scheduler, and limits cap usage. Setting both prevents one noisy container from starving others on a node."
+  },
+  {
+    "id": "doc_1113",
+    "title": "Observability with traces and metrics",
+    "text": "Traces follow a request across services, while metrics summarise rates and latencies. Teams use both to find where time is spent."
+  },
+  {
+    "id": "doc_1114",
+    "title": "Canary deployment strategy",
+    "text": "A canary deployment sends a small share of traffic to the new version. Rollback is triggered if error rates or latency cross a set threshold."
+  },
+  {
+    "id": "doc_1115",
+    "title": "Database indexing trade-offs",
+    "text": "Indexes speed up reads but slow writes and use disk space. Index usage statistics help remove indexes that no query needs."
+  },
+  {
+    "id": "doc_1116",
+    "title": "Caching strategy with time to live",
+    "text": "A cache with a time to live expires entries after a set period. Shorter times keep data fresh, and longer times reduce load on the source."
+  },
+  {
+    "id": "doc_1117",
+    "title": "Message queue dead letter handling",
+    "text": "Messages that fail repeatedly move to a dead letter queue. A person or a job reviews them, fixes the cause, and replays them."
+  },
+  {
+    "id": "doc_1118",
+    "title": "Idempotent API design",
+    "text": "An idempotent operation gives the same result when repeated. Clients send an idempotency key so retries after a timeout do not create duplicates."
+  },
+  {
+    "id": "doc_1119",
+    "title": "Pagination with cursors",
+    "text": "Cursor pagination returns a token for the next page instead of an offset. It stays stable when new rows are inserted during browsing."
+  },
+  {
+    "id": "doc_1120",
+    "title": "Unit testing versus integration testing",
+    "text": "Unit tests check one function in isolation, while integration tests check components together. A healthy suite has many unit tests and a smaller number of integration tests."
+  },
+  {
+    "id": "doc_1121",
+    "title": "Mutation testing basics",
+    "text": "Mutation testing changes the code and checks whether tests fail. Surviving mutants show places where the tests are weak."
+  },
+  {
+    "id": "doc_1122",
+    "title": "Accessibility of web forms",
+    "text": "Forms need visible labels, clear error messages, and keyboard navigation. Automated checks catch some issues, but manual testing with a screen reader catches more."
+  },
+  {
+    "id": "doc_1123",
+    "title": "Dark mode colour contrast",
+    "text": "Dark mode needs enough contrast between text and background. Contrast ratios should be checked against the accessibility guidelines for each text size."
+  },
+  {
+    "id": "doc_1124",
+    "title": "Responsive layout breakpoints",
+    "text": "Layouts change at set screen widths. Designers test the main breakpoints and check that tables and images do not overflow on small phones."
+  },
+  {
+    "id": "doc_1125",
+    "title": "Gradient descent learning rate",
+    "text": "The learning rate sets the step size in gradient descent. Too large a rate causes divergence, and too small a rate makes training slow."
+  },
+  {
+    "id": "doc_1126",
+    "title": "Overfitting and validation splits",
+    "text": "Overfitting happens when a model memorises training data. A held-out validation set shows whether performance carries over to new examples."
+  },
+  {
+    "id": "doc_1127",
+    "title": "Decision tree pruning",
+    "text": "Pruning removes branches that add little predictive value. A pruned tree generalises better and is easier to explain to stakeholders."
+  },
+  {
+    "id": "doc_1128",
+    "title": "Confusion matrix reading",
+    "text": "A confusion matrix shows true and false positives and negatives. Precision and recall are computed from its cells and depend on the class balance."
+  },
+  {
+    "id": "doc_1129",
+    "title": "Time series seasonality detection",
+    "text": "Seasonality shows repeating patterns at a fixed period, such as weekly or yearly. Decomposition separates the trend, the seasonal part, and the residual."
+  },
+  {
+    "id": "doc_1130",
+    "title": "Anomaly detection thresholds",
+    "text": "Anomaly thresholds trade false alarms against missed events. Teams choose the threshold using a labelled period of past incidents."
+  },
+  {
+    "id": "doc_1131",
+    "title": "Spreadsheet formula error checks",
+    "text": "Common spreadsheet errors include wrong ranges, hard-coded numbers, and mixed units. Auditing tools highlight formulas that reference blank cells."
+  },
+  {
+    "id": "doc_1132",
+    "title": "Project risk register",
+    "text": "A risk register lists each risk with its likelihood, impact, owner, and mitigation. Reviews update the scores and close risks that are no longer relevant."
+  },
+  {
+    "id": "doc_1133",
+    "title": "Meeting notes template",
+    "text": "A meeting note records the attendees, decisions, and actions with owners and dates. It is shared within a day so that actions do not stall."
+  },
+  {
+    "id": "doc_1134",
+    "title": "Quarterly planning okrs",
+    "text": "Objectives and key results set a direction for a quarter. Each key result is measurable, and progress is reviewed every two weeks."
+  },
+  {
+    "id": "doc_1135",
+    "title": "Stakeholder mapping grid",
+    "text": "A stakeholder grid places people by their influence and interest. The map guides how often and how deeply each person is engaged."
+  },
+  {
+    "id": "doc_1136",
+    "title": "Customer interview question design",
+    "text": "Good interview questions ask about past behaviour rather than hypothetical wishes. Open questions followed by specific examples give more reliable evidence."
+  },
+  {
+    "id": "doc_1137",
+    "title": "Pricing page experiment design",
+    "text": "A pricing experiment sets a clear hypothesis, a sample size, and a stopping rule before the test begins. Results are read only after the test finishes."
+  },
+  {
+    "id": "doc_1138",
+    "title": "Technical debt register",
+    "text": "A technical debt register records shortcuts, their cost, and the planned repayment. Teams review it alongside the feature backlog."
+  },
+  {
+    "id": "doc_1139",
+    "title": "Onboarding checklist for new engineers",
+    "text": "An onboarding checklist covers accounts, access, the first task, and key contacts. A buddy reviews progress in the first two weeks."
+  },
+  {
+    "id": "doc_1140",
+    "title": "Remote work communication norms",
+    "text": "Remote teams agree on response times, meeting hours, and channels for urgent issues. Written updates reduce the need for status meetings."
+  },
+  {
+    "id": "doc_1141",
+    "title": "Public speaking structure",
+    "text": "A talk structure with a problem, a solution, and a result is easy to follow. Examples should be short and tied to the main point."
+  },
+  {
+    "id": "doc_1142",
+    "title": "Interview preparation with stories",
+    "text": "Behavioural answers work best with a clear situation, action, and result. Each story should be rehearsed aloud and kept under a minute."
+  },
+  {
+    "id": "doc_1143",
+    "title": "Writing a clear status update",
+    "text": "A status update leads with the result, then lists risks and asks. Readers can skim it in under a minute and know what needs their attention."
+  },
+  {
+    "id": "doc_1144",
+    "title": "Learning spaced repetition",
+    "text": "Spaced repetition schedules reviews at growing intervals. Each review is timed so that recall is just difficult enough to strengthen memory."
+  },
+  {
+    "id": "doc_1145",
+    "title": "Reading habits for technical books",
+    "text": "Read a technical book with a notebook and try each example. Summarising a chapter in your own words shows what you actually understood."
+  },
+  {
+    "id": "doc_1146",
+    "title": "Sleep and focus during work sprints",
+    "text": "Regular sleep supports attention and memory. Teams that plan lighter days after a release tend to keep quality steady."
+  },
+  {
+    "id": "doc_1147",
+    "title": "Time blocking for deep work",
+    "text": "Time blocking reserves fixed periods for focused tasks. Meetings and messages are moved to other blocks so that long tasks are not interrupted."
+  },
+  {
+    "id": "doc_1148",
+    "title": "Budget tracking for a small business",
+    "text": "A small business budget compares planned and actual spending each month. Variances above a set threshold are investigated before the next month."
+  },
+  {
+    "id": "doc_1149",
+    "title": "Tax records retention",
+    "text": "Tax records should be kept for the period set by local rules. Digital copies with a clear folder structure make audits faster."
+  },
+  {
+    "id": "doc_1150",
+    "title": "Home network segmentation",
+    "text": "A home network can separate guest devices from personal computers. Firmware updates for routers should be applied on a regular schedule."
+  },
+  {
+    "id": "doc_1151",
+    "title": "Password manager adoption",
+    "text": "A password manager generates unique passwords for each site. Shared vaults should be limited to the people who need each login."
+  },
+  {
+    "id": "doc_1152",
+    "title": "Two factor authentication options",
+    "text": "Two factor methods include app codes, hardware keys, and text messages. Hardware keys resist phishing better than codes that can be typed into a fake page."
+  },
+  {
+    "id": "doc_1153",
+    "title": "Freelance contract scope clauses",
+    "text": "A freelance contract should define deliverables, revision rounds, and payment milestones. Changes outside the scope are priced separately."
+  },
+  {
+    "id": "doc_1154",
+    "title": "Negotiating a salary offer",
+    "text": "Salary negotiation starts with research on market ranges and a clear list of your contributions. Total compensation, including equity and benefits, should be compared as a whole."
+  },
+  {
+    "id": "doc_1155",
+    "title": "Written feedback for a colleague",
+    "text": "Written feedback names a specific behaviour, its effect, and a suggested change. Feedback given privately first is usually better received."
+  },
+  {
+    "id": "doc_1156",
+    "title": "Dubai airport transit visa rules",
+    "text": "Transit visa rules depend on nationality and on the transit time. Travellers should check the current entry requirements with their airline before booking."
+  },
+  {
+    "id": "doc_1157",
+    "title": "Gulf region summer heat and outdoor work",
+    "text": "Outdoor work in the Gulf in summer is scheduled around peak heat. Employers provide shade, water, and rest breaks under local labour guidance."
+  },
+  {
+    "id": "doc_1158",
+    "title": "Desert vegetation adaptation",
+    "text": "Desert plants store water in thick stems or leaves and open their stomata at night. These traits reduce water loss during the hottest hours."
+  },
+  {
+    "id": "doc_1159",
+    "title": "Historic spice trade routes",
+    "text": "Spices moved along overland and sea routes for centuries. Merchants in port cities acted as intermediaries between producers and distant buyers."
+  },
+  {
+    "id": "doc_1160",
+    "title": "Coffee roasting temperature stages",
+    "text": "Roasting passes through drying, browning, and development stages. Roasters track bean temperature and time to control the final flavour."
+  },
+  {
+    "id": "doc_1161",
+    "title": "Olive oil tasting vocabulary",
+    "text": "Olive oil tasters use terms such as fruity, bitter, and pungent. Each term has a reference point, and panels score the oil against a standard."
+  },
+  {
+    "id": "doc_1162",
+    "title": "Bread leavening with sourdough starter",
+    "text": "A sourdough starter holds wild yeast and bacteria. Feeding it on a fixed schedule keeps the culture active and the rise predictable."
+  },
+  {
+    "id": "doc_1163",
+    "title": "Tahini production process",
+    "text": "Tahini is made by grinding hulled sesame seeds into a smooth paste. Quality depends on the seed variety, roasting level, and grinding time."
+  },
+  {
+    "id": "doc_1164",
+    "title": "Hummus texture tips",
+    "text": "Smooth hummus usually needs soaked chickpeas cooked until very soft and a little cooking liquid in the blend. Lemon and tahini are added in small steps."
+  },
+  {
+    "id": "doc_1165",
+    "title": "Falafel frying oil temperature",
+    "text": "Falafel fries best at a steady oil temperature. A drop in heat makes the balls greasy, while too much heat browns the outside before the centre is hot."
+  },
+  {
+    "id": "doc_1166",
+    "title": "Citrus fruit harvesting season",
+    "text": "Citrus harvests run from late autumn into spring, depending on the variety. Growers check sugar and acid levels before picking."
+  },
+  {
+    "id": "doc_1167",
+    "title": "Date palm pollination",
+    "text": "Date palms are pollinated by hand in many orchards. Growers collect pollen in the spring and apply it to flower clusters on female trees."
+  },
+  {
+    "id": "doc_1168",
+    "title": "Seawater desalination basics",
+    "text": "Desalination removes salt from seawater by reverse osmosis or thermal distillation. Energy use is the main cost driver for both methods."
+  },
+  {
+    "id": "doc_1169",
+    "title": "Solar panel tilt angle",
+    "text": "A fixed solar panel performs best when tilted near the local latitude. Tracking mounts can add output but need more maintenance."
+  },
+  {
+    "id": "doc_1170",
+    "title": "Battery storage for solar homes",
+    "text": "Home batteries store daytime solar output for evening use. Capacity should match the nightly load and the local tariff structure."
+  },
+  {
+    "id": "doc_1171",
+    "title": "Water meter reading schedules",
+    "text": "Utilities read water meters on a monthly or bimonthly schedule. Smart meters send readings automatically and flag unusual flow patterns."
+  },
+  {
+    "id": "doc_1172",
+    "title": "Urban cycling lane design",
+    "text": "Protected cycling lanes separate bikes from traffic with kerbs or bollards. Junction design is the most important factor for rider safety."
+  },
+  {
+    "id": "doc_1173",
+    "title": "Tram line capacity planning",
+    "text": "Tram capacity depends on the headway between vehicles and the number of seats per car. Planners model peak loads to decide on extra services."
+  },
+  {
+    "id": "doc_1174",
+    "title": "Bus rapid transit boarding",
+    "text": "Level boarding and pre-paid fares reduce dwell time at bus stops. Corridors with dedicated lanes keep schedules more reliable."
+  },
+  {
+    "id": "doc_1175",
+    "title": "Parking pricing and demand",
+    "text": "Parking prices can shift demand to off-peak times and to other transport modes. Cities publish occupancy data to guide price changes."
+  },
+  {
+    "id": "doc_1176",
+    "title": "Smart city sensor networks",
+    "text": "Smart city sensors measure traffic, air quality, and noise. Data governance rules define who can access the raw data and how long it is kept."
+  },
+  {
+    "id": "doc_1177",
+    "title": "Public library lending policy",
+    "text": "Libraries set loan periods, renewal limits, and fines. Many now offer digital lending with automatic return at the end of the loan."
+  },
+  {
+    "id": "doc_1178",
+    "title": "Museum visitor flow design",
+    "text": "Museum layouts guide visitors through galleries in a set order. Crowd studies show where bottlenecks form and where seating helps."
+  },
+  {
+    "id": "doc_1179",
+    "title": "Film restoration workflow",
+    "text": "Film restoration scans each frame, removes dust and scratches, and corrects colour. Restorers keep a log of each change for archive records."
+  },
+  {
+    "id": "doc_1180",
+    "title": "Podcast editing checklist",
+    "text": "A podcast edit removes long pauses, levels the volume between speakers, and checks the intro and outro. Show notes list the topics and timestamps."
+  },
+  {
+    "id": "doc_1181",
+    "title": "Photography exposure triangle",
+    "text": "Exposure depends on aperture, shutter speed, and ISO sensitivity. Changing one setting usually requires adjusting another to keep the same brightness."
+  },
+  {
+    "id": "doc_1182",
+    "title": "Watercolour paper choice",
+    "text": "Heavier paper resists buckling when wet. Cold-pressed paper has a textured surface that holds washes well for landscapes."
+  },
+  {
+    "id": "doc_1183",
+    "title": "Chess opening principles",
+    "text": "Chess openings aim to develop pieces, control the centre, and castle early. Players study typical plans for each opening rather than memorising long lines."
+  },
+  {
+    "id": "doc_1184",
+    "title": "Football training periodisation",
+    "text": "Periodisation splits a season into phases with changing training loads. Teams plan lighter weeks before key matches to reduce injury risk."
+  },
+  {
+    "id": "doc_1185",
+    "title": "Marathon pacing strategy",
+    "text": "Runners set a pace based on a target finish time and split it into kilometre markers. Starting too fast is a common cause of late-race fade."
+  },
+  {
+    "id": "doc_1186",
+    "title": "Swimming stroke technique",
+    "text": "Efficient freestyle depends on body position, a high elbow catch, and a steady kick. Coaches use drills to isolate each part of the stroke."
+  },
+  {
+    "id": "doc_1187",
+    "title": "Yoga breathing practice",
+    "text": "Slow breathing practices can help people relax before sleep. Beginners are advised to keep the breath gentle and to stop if they feel dizzy."
+  },
+  {
+    "id": "doc_1188",
+    "title": "Strength training progression",
+    "text": "Strength programmes raise the load over time in small steps. Logging sets and reps shows whether progress is steady or stalled."
+  },
+  {
+    "id": "doc_1189",
+    "title": "Nutrition label reading",
+    "text": "Nutrition labels list energy, fat, sugar, and salt per serving and per 100 grams. Comparing the per-100-gram values is fairer across brands."
+  },
+  {
+    "id": "doc_1190",
+    "title": "Food safety cold chain",
+    "text": "Perishable foods must stay below a set temperature from production to sale. Temperature logs and alarms show where the chain was broken."
+  },
+  {
+    "id": "doc_1191",
+    "title": "Restaurant inventory counting",
+    "text": "Restaurants count stock weekly and compare it with the sales mix. Gaps point to waste, theft, or recipe portions that differ from the standard."
+  },
+  {
+    "id": "doc_1192",
+    "title": "Wine cellar temperature",
+    "text": "Wine keeps best at a steady cool temperature away from light. Large swings in temperature can speed up ageing and damage corks."
+  },
+  {
+    "id": "doc_1193",
+    "title": "Tea brewing temperatures",
+    "text": "Green tea is brewed at lower temperatures than black tea. Too hot water brings out bitterness in delicate leaves."
+  },
+  {
+    "id": "doc_1194",
+    "title": "Honey crystallisation",
+    "text": "Honey crystallises as glucose separates out, which is natural. Gentle warming in a water bath returns it to liquid without overheating."
+  },
+  {
+    "id": "doc_1195",
+    "title": "Dairy fermentation for yogurt",
+    "text": "Yogurt forms when bacterial cultures ferment lactose into lactic acid. Incubation time and temperature set the thickness and tang."
+  },
+  {
+    "id": "doc_1196",
+    "title": "Cheese ageing caves",
+    "text": "Cheese caves hold a steady humidity and temperature for ageing. Cheesemakers turn and brush rinds to control mould and texture."
+  },
+  {
+    "id": "doc_1197",
+    "title": "Garden composting ratio",
+    "text": "Good compost balances green material high in nitrogen with brown material high in carbon. Turning the pile adds air and speeds decomposition."
+  },
+  {
+    "id": "doc_1198",
+    "title": "Indoor plant watering frequency",
+    "text": "Most indoor plants need water when the top of the soil is dry. Overwatering is a more common cause of problems than underwatering."
+  },
+  {
+    "id": "doc_1199",
+    "title": "Beekeeping hive inspections",
+    "text": "Beekeepers inspect hives every one to two weeks in the active season. They look for queen cells, brood patterns, and signs of disease."
+  },
+  {
+    "id": "doc_1200",
+    "title": "Bird migration timing",
+    "text": "Birds time migration with day length and food availability. Long-term records show that some species now arrive earlier in spring."
+  },
+  {
+    "id": "doc_1201",
+    "title": "Coral reef bleaching causes",
+    "text": "Coral bleaching happens when water temperatures stay high for weeks. The corals expel their symbiotic algae and can die if conditions do not improve."
+  },
+  {
+    "id": "doc_1202",
+    "title": "Volcanic soil fertility",
+    "text": "Volcanic soils often hold many minerals, which make them fertile. Drainage and organic matter still affect how crops grow on them."
+  },
+  {
+    "id": "doc_1203",
+    "title": "Glacier retreat measurement",
+    "text": "Scientists measure glacier retreat with repeat photographs, satellite imagery, and field surveys. Mass balance studies track the gain and loss of ice each year."
+  },
+  {
+    "id": "doc_1204",
+    "title": "Earthquake magnitude scales",
+    "text": "The moment magnitude scale is the standard for large earthquakes. It is based on the energy released and the fault area, and it does not saturate like older scales."
+  },
+  {
+    "id": "doc_1205",
+    "title": "Tide prediction tables",
+    "text": "Tide tables predict high and low water from astronomical forces. Weather effects such as strong winds can shift the actual levels."
+  },
+  {
+    "id": "doc_1206",
+    "title": "Lightning protection for buildings",
+    "text": "Lightning rods and bonding conductors give strikes a safe path to the ground. Regular inspection checks that the connections are intact."
+  },
+  {
+    "id": "doc_1207",
+    "title": "Fire escape plan drills",
+    "text": "A fire escape plan sets two exits for each room and a meeting point outside. Drills twice a year help people react without panic."
+  },
+  {
+    "id": "doc_1208",
+    "title": "First aid kit contents",
+    "text": "A first aid kit for a workplace includes bandages, antiseptic wipes, gloves, and a guide. Kits are checked monthly and restocked after use."
+  },
+  {
+    "id": "doc_1209",
+    "title": "Ergonomic desk setup",
+    "text": "An ergonomic desk setup puts the screen at eye level and the keyboard at elbow height. Breaks every hour help reduce strain."
+  },
+  {
+    "id": "doc_1210",
+    "title": "Noise levels in open offices",
+    "text": "Open offices can raise noise levels that affect concentration. Acoustic panels and quiet rooms are common responses."
+  },
+  {
+    "id": "doc_1211",
+    "title": "Lighting design for reading",
+    "text": "Reading needs even light without glare. A desk lamp with a warm to neutral colour temperature reduces eye strain in the evening."
+  },
+  {
+    "id": "doc_1212",
+    "title": "Sleep cycle and alarm timing",
+    "text": "Waking at the end of a sleep cycle can feel easier than waking mid-cycle. Cycles last around ninety minutes, though they vary between people."
+  },
+  {
+    "id": "doc_1213",
+    "title": "Vaccination schedule planning",
+    "text": "Vaccination schedules set doses by age and risk group. Records should be kept for travel and school requirements."
+  },
+  {
+    "id": "doc_1214",
+    "title": "Blood pressure monitoring at home",
+    "text": "Home blood pressure readings should be taken seated after rest, at the same time each day. A log is more useful to a doctor than a single reading."
+  },
+  {
+    "id": "doc_1215",
+    "title": "Allergy season management",
+    "text": "Allergy seasons are linked to pollen counts. Antihistamines and nasal sprays work best when started before symptoms begin."
+  },
+  {
+    "id": "doc_1216",
+    "title": "Hydration needs in hot weather",
+    "text": "Hot weather raises fluid loss through sweat. Drinking regularly and adding salts in long exertion helps prevent heat illness."
+  },
+  {
+    "id": "doc_1217",
+    "title": "Child car seat installation",
+    "text": "Car seats must be fitted tightly and the harness set correctly for the child's size. Many local services check installations for free."
+  },
+  {
+    "id": "doc_1218",
+    "title": "Elder care home visit schedule",
+    "text": "Families coordinating elder care use shared calendars for visits and medication. Written handover notes reduce missed doses."
+  },
+  {
+    "id": "doc_1219",
+    "title": "Moving house checklist",
+    "text": "A moving checklist covers utilities, address changes, and insurance. Photographs of the old flat help with deposit claims."
+  },
+  {
+    "id": "doc_1220",
+    "title": "Apartment building maintenance requests",
+    "text": "Building managers log maintenance requests and track their status. Urgent faults such as water leaks are dispatched the same day."
+  },
+  {
+    "id": "doc_1221",
+    "title": "Local council planning applications",
+    "text": "Planning applications are published for public comment before a decision. Applicants may be asked to change designs to meet local rules."
+  },
+  {
+    "id": "doc_1222",
+    "title": "Court filing deadlines",
+    "text": "Court filings must arrive by set deadlines, and late filings can be rejected. Lawyers keep a calendar of every deadline in a case."
+  },
+  {
+    "id": "doc_1223",
+    "title": "Notary services for documents",
+    "text": "A notary verifies signatures and certifies copies of documents. The notary's stamp and register entry make the document usable abroad."
+  },
+  {
+    "id": "doc_1224",
+    "title": "Translation quality review",
+    "text": "A translation review compares the target text with the source for accuracy and tone. Terminology glossaries keep names and technical terms consistent."
+  },
+  {
+    "id": "doc_1225",
+    "title": "Accessibility of public websites",
+    "text": "Public websites should meet accessibility standards so that people with disabilities can use them. Testing includes keyboard use and screen readers."
+  },
+  {
+    "id": "doc_1226",
+    "title": "Open data licence choices",
+    "text": "Open data licences state how others may reuse a dataset. Clear licences reduce confusion for researchers and companies."
+  },
+  {
+    "id": "doc_1227",
+    "title": "Census data collection methods",
+    "text": "Census agencies combine household forms, administrative records, and sample surveys. Statistical checks flag areas with low response."
+  },
+  {
+    "id": "doc_1228",
+    "title": "Opinion poll sampling error",
+    "text": "A poll's margin of error depends on sample size and design. Results with small subgroups carry much larger uncertainty than the headline figure."
+  },
+  {
+    "id": "doc_1229",
+    "title": "Economic inflation index basket",
+    "text": "An inflation index tracks the prices of a fixed basket of goods and services. The basket is updated periodically to reflect spending patterns."
+  },
+  {
+    "id": "doc_1230",
+    "title": "Central bank interest rate decisions",
+    "text": "Central banks set policy rates to influence inflation and growth. Markets usually react to the statement as much as to the rate itself."
+  },
+  {
+    "id": "doc_1231",
+    "title": "Stock market index construction",
+    "text": "A stock index weights companies by market value or equal weights. Rebalancing dates keep the index in line with its rules."
+  },
+  {
+    "id": "doc_1232",
+    "title": "Startup cap table basics",
+    "text": "A cap table lists who owns what share of a company. Each new funding round dilutes existing holders unless they invest pro rata."
+  },
+  {
+    "id": "doc_1233",
+    "title": "Supply chain safety stock",
+    "text": "Safety stock covers demand swings and late deliveries. Its level depends on the variability of both demand and lead time."
+  },
+  {
+    "id": "doc_1234",
+    "title": "Warehouse pick path optimisation",
+    "text": "Pick paths route workers through storage locations in the shortest order. Slotting fast-moving items near the dispatch point saves time."
+  },
+  {
+    "id": "doc_1235",
+    "title": "Freight container tracking",
+    "text": "Container tracking uses shipping line updates and terminal scans. Delays are flagged when a container misses a planned vessel or rail departure."
+  },
+  {
+    "id": "doc_1236",
+    "title": "Customs declaration accuracy",
+    "text": "Customs declarations must list the correct classification, value, and origin. Errors can cause holds, fines, and delays at the border."
+  },
+  {
+    "id": "doc_1237",
+    "title": "Port crane productivity",
+    "text": "Port productivity is measured in container moves per crane hour. Stowage plans and truck appointments shape the rate."
+  },
+  {
+    "id": "doc_1238",
+    "title": "Rail freight wagon scheduling",
+    "text": "Rail freight schedules combine wagon groups into trains for each route. Terminal capacity and track possession windows set the timetable."
+  },
+  {
+    "id": "doc_1239",
+    "title": "Truck driver hours rules",
+    "text": "Drivers are limited in driving time and need rest breaks. Electronic logs record hours and flag breaches for the operator."
+  },
+  {
+    "id": "doc_1240",
+    "title": "Last mile delivery time windows",
+    "text": "Delivery time windows let customers pick a slot. Routing software balances the number of stops with drive time for each driver."
+  },
+  {
+    "id": "doc_1241",
+    "title": "E-commerce returns processing",
+    "text": "Returns are inspected, restocked, or sent for refurbishment. The cost per return is often higher than the cost of the original delivery."
+  },
+  {
+    "id": "doc_1242",
+    "title": "Packaging waste reduction",
+    "text": "Packaging redesign can cut material use by removing extra layers. Teams measure the result in weight per order, not only in unit cost."
+  },
+  {
+    "id": "doc_1243",
+    "title": "Factory assembly line balancing",
+    "text": "Line balancing shares tasks among stations so that no station is overloaded. Bottleneck stations limit the output of the whole line."
+  },
+  {
+    "id": "doc_1244",
+    "title": "Predictive maintenance for pumps",
+    "text": "Vibration and temperature sensors can flag pumps before they fail. Teams set alert thresholds from past failure data."
+  },
+  {
+    "id": "doc_1245",
+    "title": "Quality control sampling plans",
+    "text": "Acceptance sampling tests a share of each batch before release. The plan sets how many items to test and how many failures are allowed."
+  },
+  {
+    "id": "doc_1246",
+    "title": "Six sigma defect measurement",
+    "text": "Defects per million opportunities measure process quality. Teams track the trend over time rather than a single snapshot."
+  },
+  {
+    "id": "doc_1247",
+    "title": "Lean kanban board setup",
+    "text": "A kanban board shows work in progress across stages. Work-in-progress limits prevent the team from starting too many tasks at once."
+  },
+  {
+    "id": "doc_1248",
+    "title": "Software release notes writing",
+    "text": "Release notes list new features, fixes, and known issues in plain language. Users read them to decide whether an update affects their work."
+  },
+  {
+    "id": "doc_1249",
+    "title": "API versioning approaches",
+    "text": "APIs can be versioned in the URL or the request header. Deprecation notices give clients a fixed period to migrate before a version is retired."
+  },
+  {
+    "id": "doc_1250",
+    "title": "Mobile app crash reporting",
+    "text": "Crash reports group similar stack traces so the team can see the most common failures. Each group is linked to the app version that introduced it."
+  },
+  {
+    "id": "doc_1251",
+    "title": "Browser cache headers",
+    "text": "Cache headers tell browsers how long to keep a resource. Static assets with versioned names can be cached for a long time safely."
+  },
+  {
+    "id": "doc_1252",
+    "title": "Content delivery network routing",
+    "text": "A content delivery network serves files from locations close to the user. Cache invalidation rules decide how fast updates reach every node."
+  },
+  {
+    "id": "doc_1253",
+    "title": "Database read replica lag",
+    "text": "Read replicas can fall behind the primary, so recent writes may not appear on them at once. Applications that need fresh reads should query the primary."
+  },
+  {
+    "id": "doc_1254",
+    "title": "Event sourcing basics",
+    "text": "Event sourcing stores every change as an event and rebuilds state from them. Snapshots speed up rebuilds when the event log grows large."
+  },
+  {
+    "id": "doc_1255",
+    "title": "Microservice boundaries",
+    "text": "Service boundaries follow business capabilities and data ownership. Splitting too early creates many calls between services and slows changes."
+  },
+  {
+    "id": "doc_1256",
+    "title": "GraphQL query depth limits",
+    "text": "Deep GraphQL queries can strain a server. Depth and cost limits reject requests that would load too much data."
+  },
+  {
+    "id": "doc_1257",
+    "title": "WebSocket reconnection strategy",
+    "text": "Clients reconnect to a WebSocket with a growing delay after each failure. Adding jitter prevents many clients from reconnecting at the same moment."
+  },
+  {
+    "id": "doc_1258",
+    "title": "Regular expression pitfalls",
+    "text": "Some regular expressions have catastrophic backtracking, which can freeze a server on certain inputs. Testing with long strings reveals the problem."
+  },
+  {
+    "id": "doc_1259",
+    "title": "Unicode normalisation in search",
+    "text": "Unicode text can appear in several equivalent forms. Normalising both the index and the query prevents missed matches on accented letters."
+  },
+  {
+    "id": "doc_1260",
+    "title": "Date and time zone bugs",
+    "text": "Date bugs often come from storing local times without the zone. Storing UTC and converting on display avoids most of these errors."
+  },
+  {
+    "id": "doc_1261",
+    "title": "Floating point comparison",
+    "text": "Floating point values rarely compare equal after arithmetic. Code should compare within a small tolerance instead."
+  },
+  {
+    "id": "doc_1262",
+    "title": "Airline frequent flyer miles expiry",
+    "text": "Miles usually expire after a period of account inactivity. Members can keep points alive by earning or buying a small amount each year."
+  },
+  {
+    "id": "doc_1263",
+    "title": "Airport check-in kiosk design",
+    "text": "Check-in kiosks guide travellers through bag tags and seat selection. Staff stand by to help people who need extra time."
+  },
+  {
+    "id": "doc_1264",
+    "title": "Aircraft cleaning schedule between flights",
+    "text": "Cabins are cleaned between flights with a quick turnaround clean. Deep cleans are scheduled at night at fixed intervals."
+  },
+  {
+    "id": "doc_1265",
+    "title": "Pilot logbook entries",
+    "text": "Pilots record flight time, landings, and approaches in a logbook. Employers and licensing authorities use the logbook to verify experience."
+  },
+  {
+    "id": "doc_1266",
+    "title": "Air ambulance patient transfer",
+    "text": "Air ambulances carry patients between hospitals. Medical teams plan oxygen, drugs, and stretcher positions before each flight."
+  },
+  {
+    "id": "doc_1267",
+    "title": "Agricultural drone spraying",
+    "text": "Agricultural drones spray crops in small plots. Operators keep a flight log and follow no-fly zones near homes and roads."
+  },
+  {
+    "id": "doc_1268",
+    "title": "Airship revival projects",
+    "text": "Companies are testing modern airships for cargo and tourism. Their low speed and large volume limit their use to specific routes."
+  },
+  {
+    "id": "doc_1269",
+    "title": "Gliding thermal soaring",
+    "text": "Glider pilots find rising warm air to gain height. Competition pilots log their climbs and distances for scoring."
+  },
+  {
+    "id": "doc_1270",
+    "title": "Hot air balloon weather limits",
+    "text": "Balloon flights are cancelled in strong winds and low visibility. Pilots check the forecast and a local wind sock before launch."
+  },
+  {
+    "id": "doc_1271",
+    "title": "Model rocket motor classes",
+    "text": "Model rocket motors are rated by total impulse in letter classes. Launch sites set the classes allowed on the field."
+  },
+  {
+    "id": "doc_1272",
+    "title": "Bridge inspection schedules",
+    "text": "Bridges are inspected at intervals set by their age and condition. Inspectors use visual checks and sensors for cracks and corrosion."
+  },
+  {
+    "id": "doc_1273",
+    "title": "Tunnel ventilation design",
+    "text": "Tunnel ventilation removes fumes and smoke during normal use and in emergencies. Fans and jet systems are sized for the traffic volume."
+  },
+  {
+    "id": "doc_1274",
+    "title": "Railway signalling blocks",
+    "text": "Railway signals divide the track into blocks. A train may enter a block only when the signal shows the block is clear."
+  },
+  {
+    "id": "doc_1275",
+    "title": "Ferry boarding procedures",
+    "text": "Ferry crews check tickets and vehicle lanes before loading. Passengers are guided to lounges and lifeboat stations during the crossing."
+  },
+  {
+    "id": "doc_1276",
+    "title": "Cruise ship provisioning",
+    "text": "Cruise ships take on food and supplies at each port. Provision planners track stock levels for a voyage of several weeks."
+  },
+  {
+    "id": "doc_1277",
+    "title": "Marina berth allocation",
+    "text": "Marinas allocate berths by boat length and draft. Waiting lists are updated each season and berth holders pay an annual fee."
+  },
+  {
+    "id": "doc_1278",
+    "title": "Lifeboat drill on ships",
+    "text": "Ships hold lifeboat drills before departure. Crew members check the boats, the davits, and the release gear."
+  },
+  {
+    "id": "doc_1279",
+    "title": "Ship ballast water management",
+    "text": "Ships treat ballast water to remove organisms before discharge. Records show when and where treatment took place."
+  },
+  {
+    "id": "doc_1280",
+    "title": "Port security screening of containers",
+    "text": "Containers may be selected for scanning at port. Risk scores use shipper history and manifest data to choose which boxes to check."
+  },
+  {
+    "id": "doc_1281",
+    "title": "Maritime radio distress protocols",
+    "text": "Distress calls on marine radio start with the word mayday. Operators follow a set order of information in the message."
+  },
+  {
+    "id": "doc_1282",
+    "title": "Fishing quota management",
+    "text": "Fishing quotas set catch limits for each species and area. Vessels record landings and report them to the authority within set times."
+  },
+  {
+    "id": "doc_1283",
+    "title": "Coastal erosion monitoring",
+    "text": "Coastal erosion is tracked with repeat surveys and aerial imagery. Managers compare the results with forecasts for storm surges."
+  },
+  {
+    "id": "doc_1284",
+    "title": "Wind turbine blade maintenance",
+    "text": "Turbine blades are inspected for erosion and cracks. Technicians repair the leading edge and log the work for the warranty file."
+  },
+  {
+    "id": "doc_1285",
+    "title": "Hydroelectric reservoir levels",
+    "text": "Reservoir levels drive hydroelectric output. Operators balance power demand, flood control, and water release schedules."
+  },
+  {
+    "id": "doc_1286",
+    "title": "Nuclear plant radiation monitoring",
+    "text": "Plants monitor radiation at the site boundary and in nearby communities. Data is published on a regular schedule for transparency."
+  },
+  {
+    "id": "doc_1287",
+    "title": "Electric vehicle charging queues",
+    "text": "Charging queues form at busy stations during peak hours. Operators use app-based booking to spread demand across the day."
+  },
+  {
+    "id": "doc_1288",
+    "title": "Hybrid car battery warranty",
+    "text": "Hybrid battery warranties usually cover a set number of years or kilometres. Dealers check the state of charge and cell balance during service."
+  },
+  {
+    "id": "doc_1289",
+    "title": "Motorcycle helmet standards",
+    "text": "Helmet standards test impact absorption and chin strap strength. Riders should look for a standard mark and replace the helmet after a crash."
+  },
+  {
+    "id": "doc_1290",
+    "title": "Car tyre tread depth legal limits",
+    "text": "Many countries set a minimum tyre tread depth for safe driving. Drivers check the depth with a coin or a gauge."
+  },
+  {
+    "id": "doc_1291",
+    "title": "Truck weighbridge procedures",
+    "text": "Trucks are weighed on bridges at checkpoints. Overweight vehicles are redirected for offloading or fined under the local law."
+  },
+  {
+    "id": "doc_1292",
+    "title": "Driving test hazard perception",
+    "text": "Hazard perception tests ask candidates to spot developing risks in video clips. Early recognition earns higher scores."
+  },
+  {
+    "id": "doc_1293",
+    "title": "Road marking retroreflectivity",
+    "text": "Road markings must reflect light at night to be visible. Inspectors measure the reflectivity and schedule repainting before it drops below the limit."
+  },
+  {
+    "id": "doc_1294",
+    "title": "Traffic signal timing plans",
+    "text": "Signal timing plans change by time of day. Engineers adjust green phases to match the measured traffic flow."
+  },
+  {
+    "id": "doc_1295",
+    "title": "Speed camera calibration",
+    "text": "Speed cameras are calibrated against reference tests at set intervals. Certificates show the measurement accuracy for each device."
+  },
+  {
+    "id": "doc_1296",
+    "title": "Noise barrier design along highways",
+    "text": "Noise barriers reduce sound for homes near motorways. Height and material are chosen to meet the local noise target."
+  },
+  {
+    "id": "doc_1297",
+    "title": "Bicycle helmet fitting",
+    "text": "A bicycle helmet should sit level and snug, with the strap forming a V under the ears. The helmet should be replaced after a serious impact."
+  },
+  {
+    "id": "doc_1298",
+    "title": "Scuba diving decompression planning",
+    "text": "Divers plan dive profiles with decompression limits. Dive computers track depth and time and warn when a stop is required."
+  },
+  {
+    "id": "doc_1299",
+    "title": "Mountain hiking route planning",
+    "text": "Hikers plan routes with distance, elevation gain, and water sources. Leaving a route plan with someone at home is a basic safety step."
+  },
+  {
+    "id": "doc_1300",
+    "title": "Avalanche forecast levels",
+    "text": "Avalanche forecasts rate danger on a scale from low to extreme. Backcountry users check the forecast and terrain before departing."
+  },
+  {
+    "id": "doc_1301",
+    "title": "Camping gear weight planning",
+    "text": "Backpackers track the weight of each item and aim for a target base weight. Shared gear can cut the total for group trips."
+  },
+  {
+    "id": "doc_1302",
+    "title": "Bird watching field notes",
+    "text": "Bird watchers record species, count, location, and weather. Shared records help researchers track changes in local populations."
+  },
+  {
+    "id": "doc_1303",
+    "title": "Stargazing light pollution maps",
+    "text": "Light pollution maps show how bright the night sky is in each area. Observers use them to choose dark sites for deep-sky viewing."
+  },
+  {
+    "id": "doc_1304",
+    "title": "Telescope collimation steps",
+    "text": "Collimation aligns the mirrors of a reflecting telescope. A star test shows whether the optics are centred and focused."
+  }
+]
