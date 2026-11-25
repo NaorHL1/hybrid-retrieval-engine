@@ -16,3 +16,8 @@ dependencies = [
     "tantivy>=0.26.2",
     "uvicorn[standard]>=0.54.0",
 ]
+
+[tool.pytest.ini_options]
+markers = [
+    "integration: needs the built vector_database/ and downloaded models",
+]
